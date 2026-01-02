@@ -1,0 +1,15 @@
+C:\Users\yossry\Desktop\Examination_System\ExaminationSystem-Api-Project\src\ExaminationSystem.Application\bin\Debug\net8.0\ExaminationSystem.Application.deps.json
+C:\Users\yossry\Desktop\Examination_System\ExaminationSystem-Api-Project\src\ExaminationSystem.Application\bin\Debug\net8.0\ExaminationSystem.Application.dll
+C:\Users\yossry\Desktop\Examination_System\ExaminationSystem-Api-Project\src\ExaminationSystem.Application\bin\Debug\net8.0\ExaminationSystem.Application.pdb
+C:\Users\yossry\Desktop\Examination_System\ExaminationSystem-Api-Project\src\ExaminationSystem.Application\bin\Debug\net8.0\ExaminationSystem.Domain.dll
+C:\Users\yossry\Desktop\Examination_System\ExaminationSystem-Api-Project\src\ExaminationSystem.Application\bin\Debug\net8.0\ExaminationSystem.Domain.pdb
+C:\Users\yossry\Desktop\Examination_System\ExaminationSystem-Api-Project\src\ExaminationSystem.Application\obj\Debug\net8.0\ExaminationSystem.Application.csproj.AssemblyReference.cache
+C:\Users\yossry\Desktop\Examination_System\ExaminationSystem-Api-Project\src\ExaminationSystem.Application\obj\Debug\net8.0\ExaminationSystem.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\yossry\Desktop\Examination_System\ExaminationSystem-Api-Project\src\ExaminationSystem.Application\obj\Debug\net8.0\ExaminationSystem.Application.AssemblyInfoInputs.cache
+C:\Users\yossry\Desktop\Examination_System\ExaminationSystem-Api-Project\src\ExaminationSystem.Application\obj\Debug\net8.0\ExaminationSystem.Application.AssemblyInfo.cs
+C:\Users\yossry\Desktop\Examination_System\ExaminationSystem-Api-Project\src\ExaminationSystem.Application\obj\Debug\net8.0\ExaminationSystem.Application.csproj.CoreCompileInputs.cache
+C:\Users\yossry\Desktop\Examination_System\ExaminationSystem-Api-Project\src\ExaminationSystem.Application\obj\Debug\net8.0\Examinat.C0617372.Up2Date
+C:\Users\yossry\Desktop\Examination_System\ExaminationSystem-Api-Project\src\ExaminationSystem.Application\obj\Debug\net8.0\ExaminationSystem.Application.dll
+C:\Users\yossry\Desktop\Examination_System\ExaminationSystem-Api-Project\src\ExaminationSystem.Application\obj\Debug\net8.0\refint\ExaminationSystem.Application.dll
+C:\Users\yossry\Desktop\Examination_System\ExaminationSystem-Api-Project\src\ExaminationSystem.Application\obj\Debug\net8.0\ExaminationSystem.Application.pdb
+C:\Users\yossry\Desktop\Examination_System\ExaminationSystem-Api-Project\src\ExaminationSystem.Application\obj\Debug\net8.0\ref\ExaminationSystem.Application.dll

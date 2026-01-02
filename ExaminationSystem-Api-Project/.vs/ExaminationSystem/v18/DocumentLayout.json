@@ -1,0 +1,434 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\yossry\\Desktop\\Examination_System\\ExaminationSystem-Api-Project\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{7D5B9F4B-6EFA-4117-8F03-F0A9A89DB8C0}|src\\ExaminationSystem.Api\\ExaminationSystem.Api.csproj|c:\\users\\yossry\\desktop\\examination_system\\examinationsystem-api-project\\src\\examinationsystem.api\\validation\\requestvalidators.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7D5B9F4B-6EFA-4117-8F03-F0A9A89DB8C0}|src\\ExaminationSystem.Api\\ExaminationSystem.Api.csproj|solutionrelative:src\\examinationsystem.api\\validation\\requestvalidators.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9171602B-6AB3-41E7-AF89-6E25DF2065F2}|src\\ExaminationSystem.Infrastructure\\ExaminationSystem.Infrastructure.csproj|c:\\users\\yossry\\desktop\\examination_system\\examinationsystem-api-project\\src\\examinationsystem.infrastructure\\services\\adminservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9171602B-6AB3-41E7-AF89-6E25DF2065F2}|src\\ExaminationSystem.Infrastructure\\ExaminationSystem.Infrastructure.csproj|solutionrelative:src\\examinationsystem.infrastructure\\services\\adminservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9171602B-6AB3-41E7-AF89-6E25DF2065F2}|src\\ExaminationSystem.Infrastructure\\ExaminationSystem.Infrastructure.csproj|c:\\users\\yossry\\desktop\\examination_system\\examinationsystem-api-project\\src\\examinationsystem.infrastructure\\repositories\\adminrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9171602B-6AB3-41E7-AF89-6E25DF2065F2}|src\\ExaminationSystem.Infrastructure\\ExaminationSystem.Infrastructure.csproj|solutionrelative:src\\examinationsystem.infrastructure\\repositories\\adminrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{67341570-97D3-4C3B-A81C-372CBF535142}|src\\ExaminationSystem.Application\\ExaminationSystem.Application.csproj|c:\\users\\yossry\\desktop\\examination_system\\examinationsystem-api-project\\src\\examinationsystem.application\\abstractions\\iadminservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{67341570-97D3-4C3B-A81C-372CBF535142}|src\\ExaminationSystem.Application\\ExaminationSystem.Application.csproj|solutionrelative:src\\examinationsystem.application\\abstractions\\iadminservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7D5B9F4B-6EFA-4117-8F03-F0A9A89DB8C0}|src\\ExaminationSystem.Api\\ExaminationSystem.Api.csproj|c:\\users\\yossry\\desktop\\examination_system\\examinationsystem-api-project\\src\\examinationsystem.api\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7D5B9F4B-6EFA-4117-8F03-F0A9A89DB8C0}|src\\ExaminationSystem.Api\\ExaminationSystem.Api.csproj|solutionrelative:src\\examinationsystem.api\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7D5B9F4B-6EFA-4117-8F03-F0A9A89DB8C0}|src\\ExaminationSystem.Api\\ExaminationSystem.Api.csproj|c:\\users\\yossry\\desktop\\examination_system\\examinationsystem-api-project\\src\\examinationsystem.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7D5B9F4B-6EFA-4117-8F03-F0A9A89DB8C0}|src\\ExaminationSystem.Api\\ExaminationSystem.Api.csproj|solutionrelative:src\\examinationsystem.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7D5B9F4B-6EFA-4117-8F03-F0A9A89DB8C0}|src\\ExaminationSystem.Api\\ExaminationSystem.Api.csproj|c:\\users\\yossry\\desktop\\examination_system\\examinationsystem-api-project\\src\\examinationsystem.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{7D5B9F4B-6EFA-4117-8F03-F0A9A89DB8C0}|src\\ExaminationSystem.Api\\ExaminationSystem.Api.csproj|solutionrelative:src\\examinationsystem.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{67341570-97D3-4C3B-A81C-372CBF535142}|src\\ExaminationSystem.Application\\ExaminationSystem.Application.csproj|c:\\users\\yossry\\desktop\\examination_system\\examinationsystem-api-project\\src\\examinationsystem.application\\abstractions\\iadminrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{67341570-97D3-4C3B-A81C-372CBF535142}|src\\ExaminationSystem.Application\\ExaminationSystem.Application.csproj|solutionrelative:src\\examinationsystem.application\\abstractions\\iadminrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7D5B9F4B-6EFA-4117-8F03-F0A9A89DB8C0}|src\\ExaminationSystem.Api\\ExaminationSystem.Api.csproj|c:\\users\\yossry\\desktop\\examination_system\\examinationsystem-api-project\\src\\examinationsystem.api\\controllers\\studentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7D5B9F4B-6EFA-4117-8F03-F0A9A89DB8C0}|src\\ExaminationSystem.Api\\ExaminationSystem.Api.csproj|solutionrelative:src\\examinationsystem.api\\controllers\\studentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7D5B9F4B-6EFA-4117-8F03-F0A9A89DB8C0}|src\\ExaminationSystem.Api\\ExaminationSystem.Api.csproj|c:\\users\\yossry\\desktop\\examination_system\\examinationsystem-api-project\\src\\examinationsystem.api\\controllers\\analyticscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7D5B9F4B-6EFA-4117-8F03-F0A9A89DB8C0}|src\\ExaminationSystem.Api\\ExaminationSystem.Api.csproj|solutionrelative:src\\examinationsystem.api\\controllers\\analyticscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7D5B9F4B-6EFA-4117-8F03-F0A9A89DB8C0}|src\\ExaminationSystem.Api\\ExaminationSystem.Api.csproj|c:\\users\\yossry\\desktop\\examination_system\\examinationsystem-api-project\\src\\examinationsystem.api\\controllers\\eventcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7D5B9F4B-6EFA-4117-8F03-F0A9A89DB8C0}|src\\ExaminationSystem.Api\\ExaminationSystem.Api.csproj|solutionrelative:src\\examinationsystem.api\\controllers\\eventcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9171602B-6AB3-41E7-AF89-6E25DF2065F2}|src\\ExaminationSystem.Infrastructure\\ExaminationSystem.Infrastructure.csproj|c:\\users\\yossry\\desktop\\examination_system\\examinationsystem-api-project\\src\\examinationsystem.infrastructure\\repositories\\instructorrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9171602B-6AB3-41E7-AF89-6E25DF2065F2}|src\\ExaminationSystem.Infrastructure\\ExaminationSystem.Infrastructure.csproj|solutionrelative:src\\examinationsystem.infrastructure\\repositories\\instructorrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9171602B-6AB3-41E7-AF89-6E25DF2065F2}|src\\ExaminationSystem.Infrastructure\\ExaminationSystem.Infrastructure.csproj|c:\\users\\yossry\\desktop\\examination_system\\examinationsystem-api-project\\src\\examinationsystem.infrastructure\\services\\instructorservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9171602B-6AB3-41E7-AF89-6E25DF2065F2}|src\\ExaminationSystem.Infrastructure\\ExaminationSystem.Infrastructure.csproj|solutionrelative:src\\examinationsystem.infrastructure\\services\\instructorservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7D5B9F4B-6EFA-4117-8F03-F0A9A89DB8C0}|src\\ExaminationSystem.Api\\ExaminationSystem.Api.csproj|c:\\users\\yossry\\desktop\\examination_system\\examinationsystem-api-project\\src\\examinationsystem.api\\controllers\\instructorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7D5B9F4B-6EFA-4117-8F03-F0A9A89DB8C0}|src\\ExaminationSystem.Api\\ExaminationSystem.Api.csproj|solutionrelative:src\\examinationsystem.api\\controllers\\instructorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7D5B9F4B-6EFA-4117-8F03-F0A9A89DB8C0}|src\\ExaminationSystem.Api\\ExaminationSystem.Api.csproj|c:\\users\\yossry\\desktop\\examination_system\\examinationsystem-api-project\\src\\examinationsystem.api\\controllers\\managercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7D5B9F4B-6EFA-4117-8F03-F0A9A89DB8C0}|src\\ExaminationSystem.Api\\ExaminationSystem.Api.csproj|solutionrelative:src\\examinationsystem.api\\controllers\\managercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DC6E39F1-BF31-4790-905E-90A07117416A}|src\\ExaminationSystem.Domain\\ExaminationSystem.Domain.csproj|c:\\users\\yossry\\desktop\\examination_system\\examinationsystem-api-project\\src\\examinationsystem.domain\\identity\\jwtoptions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DC6E39F1-BF31-4790-905E-90A07117416A}|src\\ExaminationSystem.Domain\\ExaminationSystem.Domain.csproj|solutionrelative:src\\examinationsystem.domain\\identity\\jwtoptions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9171602B-6AB3-41E7-AF89-6E25DF2065F2}|src\\ExaminationSystem.Infrastructure\\ExaminationSystem.Infrastructure.csproj|c:\\users\\yossry\\desktop\\examination_system\\examinationsystem-api-project\\src\\examinationsystem.infrastructure\\repositories\\studentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9171602B-6AB3-41E7-AF89-6E25DF2065F2}|src\\ExaminationSystem.Infrastructure\\ExaminationSystem.Infrastructure.csproj|solutionrelative:src\\examinationsystem.infrastructure\\repositories\\studentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7D5B9F4B-6EFA-4117-8F03-F0A9A89DB8C0}|src\\ExaminationSystem.Api\\ExaminationSystem.Api.csproj|c:\\users\\yossry\\desktop\\examination_system\\examinationsystem-api-project\\src\\examinationsystem.api\\examinationsystem.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{7D5B9F4B-6EFA-4117-8F03-F0A9A89DB8C0}|src\\ExaminationSystem.Api\\ExaminationSystem.Api.csproj|solutionrelative:src\\examinationsystem.api\\examinationsystem.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9171602B-6AB3-41E7-AF89-6E25DF2065F2}|src\\ExaminationSystem.Infrastructure\\ExaminationSystem.Infrastructure.csproj|c:\\users\\yossry\\desktop\\examination_system\\examinationsystem-api-project\\src\\examinationsystem.infrastructure\\services\\studentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9171602B-6AB3-41E7-AF89-6E25DF2065F2}|src\\ExaminationSystem.Infrastructure\\ExaminationSystem.Infrastructure.csproj|solutionrelative:src\\examinationsystem.infrastructure\\services\\studentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9171602B-6AB3-41E7-AF89-6E25DF2065F2}|src\\ExaminationSystem.Infrastructure\\ExaminationSystem.Infrastructure.csproj|c:\\users\\yossry\\desktop\\examination_system\\examinationsystem-api-project\\src\\examinationsystem.infrastructure\\services\\managerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9171602B-6AB3-41E7-AF89-6E25DF2065F2}|src\\ExaminationSystem.Infrastructure\\ExaminationSystem.Infrastructure.csproj|solutionrelative:src\\examinationsystem.infrastructure\\services\\managerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9171602B-6AB3-41E7-AF89-6E25DF2065F2}|src\\ExaminationSystem.Infrastructure\\ExaminationSystem.Infrastructure.csproj|c:\\users\\yossry\\desktop\\examination_system\\examinationsystem-api-project\\src\\examinationsystem.infrastructure\\repositories\\profilerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9171602B-6AB3-41E7-AF89-6E25DF2065F2}|src\\ExaminationSystem.Infrastructure\\ExaminationSystem.Infrastructure.csproj|solutionrelative:src\\examinationsystem.infrastructure\\repositories\\profilerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9171602B-6AB3-41E7-AF89-6E25DF2065F2}|src\\ExaminationSystem.Infrastructure\\ExaminationSystem.Infrastructure.csproj|c:\\users\\yossry\\desktop\\examination_system\\examinationsystem-api-project\\src\\examinationsystem.infrastructure\\repositories\\managerrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9171602B-6AB3-41E7-AF89-6E25DF2065F2}|src\\ExaminationSystem.Infrastructure\\ExaminationSystem.Infrastructure.csproj|solutionrelative:src\\examinationsystem.infrastructure\\repositories\\managerrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{67341570-97D3-4C3B-A81C-372CBF535142}|src\\ExaminationSystem.Application\\ExaminationSystem.Application.csproj|c:\\users\\yossry\\desktop\\examination_system\\examinationsystem-api-project\\src\\examinationsystem.application\\abstractions\\models\\studentexamwithquestionsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{67341570-97D3-4C3B-A81C-372CBF535142}|src\\ExaminationSystem.Application\\ExaminationSystem.Application.csproj|solutionrelative:src\\examinationsystem.application\\abstractions\\models\\studentexamwithquestionsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9171602B-6AB3-41E7-AF89-6E25DF2065F2}|src\\ExaminationSystem.Infrastructure\\ExaminationSystem.Infrastructure.csproj|c:\\users\\yossry\\desktop\\examination_system\\examinationsystem-api-project\\src\\examinationsystem.infrastructure\\services\\profileservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9171602B-6AB3-41E7-AF89-6E25DF2065F2}|src\\ExaminationSystem.Infrastructure\\ExaminationSystem.Infrastructure.csproj|solutionrelative:src\\examinationsystem.infrastructure\\services\\profileservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 326,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "RequestValidators.cs",
+              "DocumentMoniker": "C:\\Users\\yossry\\Desktop\\Examination_System\\ExaminationSystem-Api-Project\\src\\ExaminationSystem.Api\\Validation\\RequestValidators.cs",
+              "RelativeDocumentMoniker": "src\\ExaminationSystem.Api\\Validation\\RequestValidators.cs",
+              "ToolTip": "C:\\Users\\yossry\\Desktop\\Examination_System\\ExaminationSystem-Api-Project\\src\\ExaminationSystem.Api\\Validation\\RequestValidators.cs",
+              "RelativeToolTip": "src\\ExaminationSystem.Api\\Validation\\RequestValidators.cs",
+              "ViewState": "AgIAAPgAAAAAAAAAAAAcwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-02T16:18:04.975Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "IAdminRepository.cs",
+              "DocumentMoniker": "C:\\Users\\yossry\\Desktop\\Examination_System\\ExaminationSystem-Api-Project\\src\\ExaminationSystem.Application\\Abstractions\\IAdminRepository.cs",
+              "RelativeDocumentMoniker": "src\\ExaminationSystem.Application\\Abstractions\\IAdminRepository.cs",
+              "ToolTip": "C:\\Users\\yossry\\Desktop\\Examination_System\\ExaminationSystem-Api-Project\\src\\ExaminationSystem.Application\\Abstractions\\IAdminRepository.cs",
+              "RelativeToolTip": "src\\ExaminationSystem.Application\\Abstractions\\IAdminRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-17T23:54:26.59Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\yossry\\Desktop\\Examination_System\\ExaminationSystem-Api-Project\\src\\ExaminationSystem.Api\\Program.cs",
+              "RelativeDocumentMoniker": "src\\ExaminationSystem.Api\\Program.cs",
+              "ToolTip": "C:\\Users\\yossry\\Desktop\\Examination_System\\ExaminationSystem-Api-Project\\src\\ExaminationSystem.Api\\Program.cs",
+              "RelativeToolTip": "src\\ExaminationSystem.Api\\Program.cs",
+              "ViewState": "AgIAAFQAAAAAAAAAAAAWwGsAAABFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-15T15:33:35.888Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\yossry\\Desktop\\Examination_System\\ExaminationSystem-Api-Project\\src\\ExaminationSystem.Api\\appsettings.json",
+              "RelativeDocumentMoniker": "src\\ExaminationSystem.Api\\appsettings.json",
+              "ToolTip": "C:\\Users\\yossry\\Desktop\\Examination_System\\ExaminationSystem-Api-Project\\src\\ExaminationSystem.Api\\appsettings.json",
+              "RelativeToolTip": "src\\ExaminationSystem.Api\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-11-16T13:17:37.031Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "JwtOptions.cs",
+              "DocumentMoniker": "C:\\Users\\yossry\\Desktop\\Examination_System\\ExaminationSystem-Api-Project\\src\\ExaminationSystem.Domain\\Identity\\JwtOptions.cs",
+              "RelativeDocumentMoniker": "src\\ExaminationSystem.Domain\\Identity\\JwtOptions.cs",
+              "ToolTip": "C:\\Users\\yossry\\Desktop\\Examination_System\\ExaminationSystem-Api-Project\\src\\ExaminationSystem.Domain\\Identity\\JwtOptions.cs",
+              "RelativeToolTip": "src\\ExaminationSystem.Domain\\Identity\\JwtOptions.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-16T13:17:22.795Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AdminController.cs",
+              "DocumentMoniker": "C:\\Users\\yossry\\Desktop\\Examination_System\\ExaminationSystem-Api-Project\\src\\ExaminationSystem.Api\\Controllers\\AdminController.cs",
+              "RelativeDocumentMoniker": "src\\ExaminationSystem.Api\\Controllers\\AdminController.cs",
+              "ToolTip": "C:\\Users\\yossry\\Desktop\\Examination_System\\ExaminationSystem-Api-Project\\src\\ExaminationSystem.Api\\Controllers\\AdminController.cs",
+              "RelativeToolTip": "src\\ExaminationSystem.Api\\Controllers\\AdminController.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-15T15:37:27.057Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "IAdminService.cs",
+              "DocumentMoniker": "C:\\Users\\yossry\\Desktop\\Examination_System\\ExaminationSystem-Api-Project\\src\\ExaminationSystem.Application\\Abstractions\\IAdminService.cs",
+              "RelativeDocumentMoniker": "src\\ExaminationSystem.Application\\Abstractions\\IAdminService.cs",
+              "ToolTip": "C:\\Users\\yossry\\Desktop\\Examination_System\\ExaminationSystem-Api-Project\\src\\ExaminationSystem.Application\\Abstractions\\IAdminService.cs",
+              "RelativeToolTip": "src\\ExaminationSystem.Application\\Abstractions\\IAdminService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-15T15:37:31.496Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AdminRepository.cs",
+              "DocumentMoniker": "C:\\Users\\yossry\\Desktop\\Examination_System\\ExaminationSystem-Api-Project\\src\\ExaminationSystem.Infrastructure\\Repositories\\AdminRepository.cs",
+              "RelativeDocumentMoniker": "src\\ExaminationSystem.Infrastructure\\Repositories\\AdminRepository.cs",
+              "ToolTip": "C:\\Users\\yossry\\Desktop\\Examination_System\\ExaminationSystem-Api-Project\\src\\ExaminationSystem.Infrastructure\\Repositories\\AdminRepository.cs",
+              "RelativeToolTip": "src\\ExaminationSystem.Infrastructure\\Repositories\\AdminRepository.cs",
+              "ViewState": "AgIAAEIAAAAAAAAAAAAmwAgAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-15T15:39:12.009Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AdminService.cs",
+              "DocumentMoniker": "C:\\Users\\yossry\\Desktop\\Examination_System\\ExaminationSystem-Api-Project\\src\\ExaminationSystem.Infrastructure\\Services\\AdminService.cs",
+              "RelativeDocumentMoniker": "src\\ExaminationSystem.Infrastructure\\Services\\AdminService.cs",
+              "ToolTip": "C:\\Users\\yossry\\Desktop\\Examination_System\\ExaminationSystem-Api-Project\\src\\ExaminationSystem.Infrastructure\\Services\\AdminService.cs",
+              "RelativeToolTip": "src\\ExaminationSystem.Infrastructure\\Services\\AdminService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-15T15:39:51.358Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "InstructorController.cs",
+              "DocumentMoniker": "C:\\Users\\yossry\\Desktop\\Examination_System\\ExaminationSystem-Api-Project\\src\\ExaminationSystem.Api\\Controllers\\InstructorController.cs",
+              "RelativeDocumentMoniker": "src\\ExaminationSystem.Api\\Controllers\\InstructorController.cs",
+              "ToolTip": "C:\\Users\\yossry\\Desktop\\Examination_System\\ExaminationSystem-Api-Project\\src\\ExaminationSystem.Api\\Controllers\\InstructorController.cs",
+              "RelativeToolTip": "src\\ExaminationSystem.Api\\Controllers\\InstructorController.cs",
+              "ViewState": "AgIAACIAAAAAAAAAAAAawDkAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-17T20:04:38.031Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "EventController.cs",
+              "DocumentMoniker": "C:\\Users\\yossry\\Desktop\\Examination_System\\ExaminationSystem-Api-Project\\src\\ExaminationSystem.Api\\Controllers\\EventController.cs",
+              "RelativeDocumentMoniker": "src\\ExaminationSystem.Api\\Controllers\\EventController.cs",
+              "ToolTip": "C:\\Users\\yossry\\Desktop\\Examination_System\\ExaminationSystem-Api-Project\\src\\ExaminationSystem.Api\\Controllers\\EventController.cs",
+              "RelativeToolTip": "src\\ExaminationSystem.Api\\Controllers\\EventController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-17T23:14:49.083Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "AnalyticsController.cs",
+              "DocumentMoniker": "C:\\Users\\yossry\\Desktop\\Examination_System\\ExaminationSystem-Api-Project\\src\\ExaminationSystem.Api\\Controllers\\AnalyticsController.cs",
+              "RelativeDocumentMoniker": "src\\ExaminationSystem.Api\\Controllers\\AnalyticsController.cs",
+              "ToolTip": "C:\\Users\\yossry\\Desktop\\Examination_System\\ExaminationSystem-Api-Project\\src\\ExaminationSystem.Api\\Controllers\\AnalyticsController.cs",
+              "RelativeToolTip": "src\\ExaminationSystem.Api\\Controllers\\AnalyticsController.cs",
+              "ViewState": "AgIAACkAAAAAAAAAAAAwwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-17T23:15:24.074Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "StudentController.cs",
+              "DocumentMoniker": "C:\\Users\\yossry\\Desktop\\Examination_System\\ExaminationSystem-Api-Project\\src\\ExaminationSystem.Api\\Controllers\\StudentController.cs",
+              "RelativeDocumentMoniker": "src\\ExaminationSystem.Api\\Controllers\\StudentController.cs",
+              "ToolTip": "C:\\Users\\yossry\\Desktop\\Examination_System\\ExaminationSystem-Api-Project\\src\\ExaminationSystem.Api\\Controllers\\StudentController.cs",
+              "RelativeToolTip": "src\\ExaminationSystem.Api\\Controllers\\StudentController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-17T23:21:09.555Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "StudentService.cs",
+              "DocumentMoniker": "C:\\Users\\yossry\\Desktop\\Examination_System\\ExaminationSystem-Api-Project\\src\\ExaminationSystem.Infrastructure\\Services\\StudentService.cs",
+              "RelativeDocumentMoniker": "src\\ExaminationSystem.Infrastructure\\Services\\StudentService.cs",
+              "ToolTip": "C:\\Users\\yossry\\Desktop\\Examination_System\\ExaminationSystem-Api-Project\\src\\ExaminationSystem.Infrastructure\\Services\\StudentService.cs",
+              "RelativeToolTip": "src\\ExaminationSystem.Infrastructure\\Services\\StudentService.cs",
+              "ViewState": "AgIAACYAAAAAAAAAAAAkwDoAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-15T15:39:59.68Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "ManagerService.cs",
+              "DocumentMoniker": "C:\\Users\\yossry\\Desktop\\Examination_System\\ExaminationSystem-Api-Project\\src\\ExaminationSystem.Infrastructure\\Services\\ManagerService.cs",
+              "RelativeDocumentMoniker": "src\\ExaminationSystem.Infrastructure\\Services\\ManagerService.cs",
+              "ToolTip": "C:\\Users\\yossry\\Desktop\\Examination_System\\ExaminationSystem-Api-Project\\src\\ExaminationSystem.Infrastructure\\Services\\ManagerService.cs",
+              "RelativeToolTip": "src\\ExaminationSystem.Infrastructure\\Services\\ManagerService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-15T15:39:55.995Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "InstructorService.cs",
+              "DocumentMoniker": "C:\\Users\\yossry\\Desktop\\Examination_System\\ExaminationSystem-Api-Project\\src\\ExaminationSystem.Infrastructure\\Services\\InstructorService.cs",
+              "RelativeDocumentMoniker": "src\\ExaminationSystem.Infrastructure\\Services\\InstructorService.cs",
+              "ToolTip": "C:\\Users\\yossry\\Desktop\\Examination_System\\ExaminationSystem-Api-Project\\src\\ExaminationSystem.Infrastructure\\Services\\InstructorService.cs",
+              "RelativeToolTip": "src\\ExaminationSystem.Infrastructure\\Services\\InstructorService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-15T15:39:54.047Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "InstructorRepository.cs",
+              "DocumentMoniker": "C:\\Users\\yossry\\Desktop\\Examination_System\\ExaminationSystem-Api-Project\\src\\ExaminationSystem.Infrastructure\\Repositories\\InstructorRepository.cs",
+              "RelativeDocumentMoniker": "src\\ExaminationSystem.Infrastructure\\Repositories\\InstructorRepository.cs",
+              "ToolTip": "C:\\Users\\yossry\\Desktop\\Examination_System\\ExaminationSystem-Api-Project\\src\\ExaminationSystem.Infrastructure\\Repositories\\InstructorRepository.cs",
+              "RelativeToolTip": "src\\ExaminationSystem.Infrastructure\\Repositories\\InstructorRepository.cs",
+              "ViewState": "AgIAACAAAAAAAAAAAAAwwAsAAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-15T15:39:14.184Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "ManagerController.cs",
+              "DocumentMoniker": "C:\\Users\\yossry\\Desktop\\Examination_System\\ExaminationSystem-Api-Project\\src\\ExaminationSystem.Api\\Controllers\\ManagerController.cs",
+              "RelativeDocumentMoniker": "src\\ExaminationSystem.Api\\Controllers\\ManagerController.cs",
+              "ToolTip": "C:\\Users\\yossry\\Desktop\\Examination_System\\ExaminationSystem-Api-Project\\src\\ExaminationSystem.Api\\Controllers\\ManagerController.cs",
+              "RelativeToolTip": "src\\ExaminationSystem.Api\\Controllers\\ManagerController.cs",
+              "ViewState": "AgIAAHwAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-16T22:13:39.525Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "StudentRepository.cs",
+              "DocumentMoniker": "C:\\Users\\yossry\\Desktop\\Examination_System\\ExaminationSystem-Api-Project\\src\\ExaminationSystem.Infrastructure\\Repositories\\StudentRepository.cs",
+              "RelativeDocumentMoniker": "src\\ExaminationSystem.Infrastructure\\Repositories\\StudentRepository.cs",
+              "ToolTip": "C:\\Users\\yossry\\Desktop\\Examination_System\\ExaminationSystem-Api-Project\\src\\ExaminationSystem.Infrastructure\\Repositories\\StudentRepository.cs",
+              "RelativeToolTip": "src\\ExaminationSystem.Infrastructure\\Repositories\\StudentRepository.cs",
+              "ViewState": "AgIAAEUAAAAAAAAAAAAYwFgAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-15T15:39:23.517Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "ExaminationSystem.Api.csproj",
+              "DocumentMoniker": "C:\\Users\\yossry\\Desktop\\Examination_System\\ExaminationSystem-Api-Project\\src\\ExaminationSystem.Api\\ExaminationSystem.Api.csproj",
+              "RelativeDocumentMoniker": "src\\ExaminationSystem.Api\\ExaminationSystem.Api.csproj",
+              "ToolTip": "C:\\Users\\yossry\\Desktop\\Examination_System\\ExaminationSystem-Api-Project\\src\\ExaminationSystem.Api\\ExaminationSystem.Api.csproj",
+              "RelativeToolTip": "src\\ExaminationSystem.Api\\ExaminationSystem.Api.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-11-15T15:40:01.322Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "ProfileRepository.cs",
+              "DocumentMoniker": "C:\\Users\\yossry\\Desktop\\Examination_System\\ExaminationSystem-Api-Project\\src\\ExaminationSystem.Infrastructure\\Repositories\\ProfileRepository.cs",
+              "RelativeDocumentMoniker": "src\\ExaminationSystem.Infrastructure\\Repositories\\ProfileRepository.cs",
+              "ToolTip": "C:\\Users\\yossry\\Desktop\\Examination_System\\ExaminationSystem-Api-Project\\src\\ExaminationSystem.Infrastructure\\Repositories\\ProfileRepository.cs",
+              "RelativeToolTip": "src\\ExaminationSystem.Infrastructure\\Repositories\\ProfileRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-15T15:39:21.354Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "ManagerRepository.cs",
+              "DocumentMoniker": "C:\\Users\\yossry\\Desktop\\Examination_System\\ExaminationSystem-Api-Project\\src\\ExaminationSystem.Infrastructure\\Repositories\\ManagerRepository.cs",
+              "RelativeDocumentMoniker": "src\\ExaminationSystem.Infrastructure\\Repositories\\ManagerRepository.cs",
+              "ToolTip": "C:\\Users\\yossry\\Desktop\\Examination_System\\ExaminationSystem-Api-Project\\src\\ExaminationSystem.Infrastructure\\Repositories\\ManagerRepository.cs",
+              "RelativeToolTip": "src\\ExaminationSystem.Infrastructure\\Repositories\\ManagerRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-15T15:39:17.325Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "StudentExamWithQuestionsDto.cs",
+              "DocumentMoniker": "C:\\Users\\yossry\\Desktop\\Examination_System\\ExaminationSystem-Api-Project\\src\\ExaminationSystem.Application\\Abstractions\\Models\\StudentExamWithQuestionsDto.cs",
+              "RelativeDocumentMoniker": "src\\ExaminationSystem.Application\\Abstractions\\Models\\StudentExamWithQuestionsDto.cs",
+              "ToolTip": "C:\\Users\\yossry\\Desktop\\Examination_System\\ExaminationSystem-Api-Project\\src\\ExaminationSystem.Application\\Abstractions\\Models\\StudentExamWithQuestionsDto.cs",
+              "RelativeToolTip": "src\\ExaminationSystem.Application\\Abstractions\\Models\\StudentExamWithQuestionsDto.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAkwB4AAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-15T15:39:08.645Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "ProfileService.cs",
+              "DocumentMoniker": "C:\\Users\\yossry\\Desktop\\Examination_System\\ExaminationSystem-Api-Project\\src\\ExaminationSystem.Infrastructure\\Services\\ProfileService.cs",
+              "RelativeDocumentMoniker": "src\\ExaminationSystem.Infrastructure\\Services\\ProfileService.cs",
+              "ToolTip": "C:\\Users\\yossry\\Desktop\\Examination_System\\ExaminationSystem-Api-Project\\src\\ExaminationSystem.Infrastructure\\Services\\ProfileService.cs",
+              "RelativeToolTip": "src\\ExaminationSystem.Infrastructure\\Services\\ProfileService.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAwAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-15T15:38:47.678Z"
+            }
+          ]
+        },
+        {
+          "DockedHeight": 74,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

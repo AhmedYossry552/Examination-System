@@ -1,0 +1,11 @@
+C:\Users\yossry\Desktop\Examination_System\ExaminationSystem-Api-Project\src\ExaminationSystem.Domain\bin\Debug\net8.0\ExaminationSystem.Domain.deps.json
+C:\Users\yossry\Desktop\Examination_System\ExaminationSystem-Api-Project\src\ExaminationSystem.Domain\bin\Debug\net8.0\ExaminationSystem.Domain.dll
+C:\Users\yossry\Desktop\Examination_System\ExaminationSystem-Api-Project\src\ExaminationSystem.Domain\bin\Debug\net8.0\ExaminationSystem.Domain.pdb
+C:\Users\yossry\Desktop\Examination_System\ExaminationSystem-Api-Project\src\ExaminationSystem.Domain\obj\Debug\net8.0\ExaminationSystem.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\yossry\Desktop\Examination_System\ExaminationSystem-Api-Project\src\ExaminationSystem.Domain\obj\Debug\net8.0\ExaminationSystem.Domain.AssemblyInfoInputs.cache
+C:\Users\yossry\Desktop\Examination_System\ExaminationSystem-Api-Project\src\ExaminationSystem.Domain\obj\Debug\net8.0\ExaminationSystem.Domain.AssemblyInfo.cs
+C:\Users\yossry\Desktop\Examination_System\ExaminationSystem-Api-Project\src\ExaminationSystem.Domain\obj\Debug\net8.0\ExaminationSystem.Domain.csproj.CoreCompileInputs.cache
+C:\Users\yossry\Desktop\Examination_System\ExaminationSystem-Api-Project\src\ExaminationSystem.Domain\obj\Debug\net8.0\ExaminationSystem.Domain.dll
+C:\Users\yossry\Desktop\Examination_System\ExaminationSystem-Api-Project\src\ExaminationSystem.Domain\obj\Debug\net8.0\refint\ExaminationSystem.Domain.dll
+C:\Users\yossry\Desktop\Examination_System\ExaminationSystem-Api-Project\src\ExaminationSystem.Domain\obj\Debug\net8.0\ExaminationSystem.Domain.pdb
+C:\Users\yossry\Desktop\Examination_System\ExaminationSystem-Api-Project\src\ExaminationSystem.Domain\obj\Debug\net8.0\ref\ExaminationSystem.Domain.dll

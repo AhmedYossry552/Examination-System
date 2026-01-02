@@ -1,0 +1,17 @@
+C:\Users\yossry\Desktop\Examination_System\ExaminationSystem-Api-Project\src\ExaminationSystem.Infrastructure\bin\Debug\net8.0\ExaminationSystem.Infrastructure.deps.json
+C:\Users\yossry\Desktop\Examination_System\ExaminationSystem-Api-Project\src\ExaminationSystem.Infrastructure\bin\Debug\net8.0\ExaminationSystem.Infrastructure.dll
+C:\Users\yossry\Desktop\Examination_System\ExaminationSystem-Api-Project\src\ExaminationSystem.Infrastructure\bin\Debug\net8.0\ExaminationSystem.Infrastructure.pdb
+C:\Users\yossry\Desktop\Examination_System\ExaminationSystem-Api-Project\src\ExaminationSystem.Infrastructure\bin\Debug\net8.0\ExaminationSystem.Application.dll
+C:\Users\yossry\Desktop\Examination_System\ExaminationSystem-Api-Project\src\ExaminationSystem.Infrastructure\bin\Debug\net8.0\ExaminationSystem.Domain.dll
+C:\Users\yossry\Desktop\Examination_System\ExaminationSystem-Api-Project\src\ExaminationSystem.Infrastructure\bin\Debug\net8.0\ExaminationSystem.Domain.pdb
+C:\Users\yossry\Desktop\Examination_System\ExaminationSystem-Api-Project\src\ExaminationSystem.Infrastructure\bin\Debug\net8.0\ExaminationSystem.Application.pdb
+C:\Users\yossry\Desktop\Examination_System\ExaminationSystem-Api-Project\src\ExaminationSystem.Infrastructure\obj\Debug\net8.0\ExaminationSystem.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\yossry\Desktop\Examination_System\ExaminationSystem-Api-Project\src\ExaminationSystem.Infrastructure\obj\Debug\net8.0\ExaminationSystem.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\yossry\Desktop\Examination_System\ExaminationSystem-Api-Project\src\ExaminationSystem.Infrastructure\obj\Debug\net8.0\ExaminationSystem.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\yossry\Desktop\Examination_System\ExaminationSystem-Api-Project\src\ExaminationSystem.Infrastructure\obj\Debug\net8.0\ExaminationSystem.Infrastructure.AssemblyInfo.cs
+C:\Users\yossry\Desktop\Examination_System\ExaminationSystem-Api-Project\src\ExaminationSystem.Infrastructure\obj\Debug\net8.0\ExaminationSystem.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\yossry\Desktop\Examination_System\ExaminationSystem-Api-Project\src\ExaminationSystem.Infrastructure\obj\Debug\net8.0\Examinat.8410A05D.Up2Date
+C:\Users\yossry\Desktop\Examination_System\ExaminationSystem-Api-Project\src\ExaminationSystem.Infrastructure\obj\Debug\net8.0\ExaminationSystem.Infrastructure.dll
+C:\Users\yossry\Desktop\Examination_System\ExaminationSystem-Api-Project\src\ExaminationSystem.Infrastructure\obj\Debug\net8.0\refint\ExaminationSystem.Infrastructure.dll
+C:\Users\yossry\Desktop\Examination_System\ExaminationSystem-Api-Project\src\ExaminationSystem.Infrastructure\obj\Debug\net8.0\ExaminationSystem.Infrastructure.pdb
+C:\Users\yossry\Desktop\Examination_System\ExaminationSystem-Api-Project\src\ExaminationSystem.Infrastructure\obj\Debug\net8.0\ref\ExaminationSystem.Infrastructure.dll
