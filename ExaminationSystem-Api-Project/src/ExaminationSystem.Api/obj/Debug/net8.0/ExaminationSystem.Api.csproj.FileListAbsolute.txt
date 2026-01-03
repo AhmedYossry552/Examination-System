@@ -129,3 +129,4 @@ C:\Users\yossry\Desktop\Examination_System\ExaminationSystem-Api-Project\src\Exa
 C:\Users\yossry\Desktop\Examination_System\ExaminationSystem-Api-Project\src\ExaminationSystem.Api\obj\Debug\net8.0\ExaminationSystem.Api.pdb
 C:\Users\yossry\Desktop\Examination_System\ExaminationSystem-Api-Project\src\ExaminationSystem.Api\obj\Debug\net8.0\ExaminationSystem.Api.genruntimeconfig.cache
 C:\Users\yossry\Desktop\Examination_System\ExaminationSystem-Api-Project\src\ExaminationSystem.Api\obj\Debug\net8.0\ref\ExaminationSystem.Api.dll
+C:\Users\yossry\Desktop\Examination_System\ExaminationSystem-Api-Project\src\ExaminationSystem.Api\obj\Debug\net8.0\ExaminationSystem.Api.sourcelink.json

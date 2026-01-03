@@ -407,10 +407,20 @@ namespace ExaminationSystem.Infrastructure.Repositories
         }
 
         #region Reports
-        public async Task<ReportOverviewDto> GetReportOverviewAsync()
+        public async Task<ReportOverviewDto> GetReportOverviewAsync(string? period = null)
         {
             using var conn = _connectionFactory.CreateConnection();
-            var sql = @"
+            
+            // Calculate date filter based on period
+            var dateFilter = period?.ToLower() switch
+            {
+                "week" => "AND DATEDIFF(DAY, se.SubmissionTime, GETDATE()) <= 7",
+                "month" => "AND MONTH(se.SubmissionTime) = MONTH(GETDATE()) AND YEAR(se.SubmissionTime) = YEAR(GETDATE())",
+                "year" => "AND YEAR(se.SubmissionTime) = YEAR(GETDATE())",
+                _ => ""
+            };
+
+            var sql = $@"
                 SELECT 
                     (SELECT COUNT(*) FROM Academic.Student WHERE IsActive = 1) AS TotalStudents,
                     (SELECT COUNT(*) FROM Academic.Instructor WHERE IsActive = 1) AS TotalInstructors,
@@ -422,7 +432,7 @@ namespace ExaminationSystem.Infrastructure.Repositories
                         NULLIF(COUNT(*), 0) * 100, 0)
                      FROM Exam.StudentExam se
                      JOIN Exam.Exam e ON se.ExamID = e.ExamID
-                     WHERE se.SubmissionTime IS NOT NULL) AS AveragePassRate,
+                     WHERE se.SubmissionTime IS NOT NULL {dateFilter}) AS AveragePassRate,
                     (SELECT COUNT(*) 
                      FROM Exam.Exam 
                      WHERE IsActive = 1 
@@ -528,6 +538,37 @@ namespace ExaminationSystem.Infrastructure.Repositories
                 Status: (string)student.Status,
                 ExamHistory: examHistory
             );
+        }
+
+        public async Task<IEnumerable<ExamResultReportDto>> GetExamResultsAsync()
+        {
+            using var conn = _connectionFactory.CreateConnection();
+            var sql = @"
+                SELECT 
+                    e.ExamID AS ExamId,
+                    e.ExamName,
+                    c.CourseName,
+                    (SELECT COUNT(DISTINCT sea.StudentID) FROM Exam.StudentExamAssignment sea WHERE sea.ExamID = e.ExamID) AS TotalStudents,
+                    COUNT(DISTINCT CASE WHEN se.SubmissionTime IS NOT NULL THEN se.StudentExamID END) AS SubmittedCount,
+                    SUM(CASE WHEN se.TotalScore >= e.PassMarks AND se.SubmissionTime IS NOT NULL THEN 1 ELSE 0 END) AS PassedCount,
+                    ISNULL(AVG(CASE WHEN se.SubmissionTime IS NOT NULL THEN CAST(se.TotalScore AS FLOAT) / NULLIF(e.TotalMarks, 0) * 100 END), 0) AS AverageScore,
+                    ISNULL(CAST(SUM(CASE WHEN se.TotalScore >= e.PassMarks AND se.SubmissionTime IS NOT NULL THEN 1 ELSE 0 END) AS FLOAT) / 
+                           NULLIF(COUNT(CASE WHEN se.SubmissionTime IS NOT NULL THEN 1 END), 0) * 100, 0) AS PassRate,
+                    e.StartDateTime AS ExamDate,
+                    CASE 
+                        WHEN e.IsActive = 0 THEN 'Inactive'
+                        WHEN e.EndDateTime < GETDATE() THEN 'Completed'
+                        WHEN e.StartDateTime > GETDATE() THEN 'Scheduled'
+                        ELSE 'In Progress'
+                    END AS Status
+                FROM Exam.Exam e
+                JOIN Academic.Course c ON e.CourseID = c.CourseID
+                LEFT JOIN Exam.StudentExam se ON e.ExamID = se.ExamID
+                WHERE e.IsActive = 1
+                GROUP BY e.ExamID, e.ExamName, c.CourseName, e.TotalMarks, e.PassMarks, e.StartDateTime, e.EndDateTime, e.IsActive
+                ORDER BY e.StartDateTime DESC";
+
+            return await conn.QueryAsync<ExamResultReportDto>(sql);
         }
         #endregion
     }

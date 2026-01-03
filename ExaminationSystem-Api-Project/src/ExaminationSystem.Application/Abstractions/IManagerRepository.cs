@@ -40,8 +40,9 @@ namespace ExaminationSystem.Application.Abstractions
         Task DeleteEnrollmentAsync(int enrollmentId);
 
         // Reports
-        Task<ReportOverviewDto> GetReportOverviewAsync();
+        Task<ReportOverviewDto> GetReportOverviewAsync(string? period = null);
         Task<IEnumerable<CoursePerformanceReportDto>> GetCoursePerformanceAsync(int? courseId = null);
         Task<StudentPerformanceReportDto?> GetStudentPerformanceAsync(int studentId);
+        Task<IEnumerable<ExamResultReportDto>> GetExamResultsAsync();
     }
 }

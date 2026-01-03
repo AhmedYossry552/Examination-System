@@ -84,13 +84,16 @@ namespace ExaminationSystem.Infrastructure.Services
             => _repo.DeleteEnrollmentAsync(enrollmentId);
 
         // Reports
-        public Task<ReportOverviewDto> GetReportOverviewAsync(int userId)
-            => _repo.GetReportOverviewAsync();
+        public Task<ReportOverviewDto> GetReportOverviewAsync(int userId, string? period = null)
+            => _repo.GetReportOverviewAsync(period);
 
         public Task<IEnumerable<CoursePerformanceReportDto>> GetCoursePerformanceAsync(int userId, int? courseId = null)
             => _repo.GetCoursePerformanceAsync(courseId);
 
         public Task<StudentPerformanceReportDto?> GetStudentPerformanceAsync(int userId, int studentId)
             => _repo.GetStudentPerformanceAsync(studentId);
+
+        public Task<IEnumerable<ExamResultReportDto>> GetExamResultsAsync(int userId)
+            => _repo.GetExamResultsAsync();
     }
 }

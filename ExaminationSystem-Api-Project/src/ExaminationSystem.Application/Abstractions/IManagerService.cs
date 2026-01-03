@@ -40,9 +40,10 @@ namespace ExaminationSystem.Application.Abstractions
         Task DeleteEnrollmentAsync(int userId, int enrollmentId);
 
         // Reports
-        Task<ReportOverviewDto> GetReportOverviewAsync(int userId);
+        Task<ReportOverviewDto> GetReportOverviewAsync(int userId, string? period = null);
         Task<IEnumerable<CoursePerformanceReportDto>> GetCoursePerformanceAsync(int userId, int? courseId = null);
         Task<StudentPerformanceReportDto?> GetStudentPerformanceAsync(int userId, int studentId);
+        Task<IEnumerable<ExamResultReportDto>> GetExamResultsAsync(int userId);
     }
 
     // Report DTOs
@@ -87,5 +88,18 @@ namespace ExaminationSystem.Application.Abstractions
         System.DateTime ExamDate,
         double Score,
         bool Passed
+    );
+
+    public record ExamResultReportDto(
+        int ExamId,
+        string ExamName,
+        string CourseName,
+        int TotalStudents,
+        int SubmittedCount,
+        int PassedCount,
+        double AverageScore,
+        double PassRate,
+        System.DateTime ExamDate,
+        string Status
     );
 }

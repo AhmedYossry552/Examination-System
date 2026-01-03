@@ -15,3 +15,4 @@ C:\Users\yossry\Desktop\Examination_System\ExaminationSystem-Api-Project\src\Exa
 C:\Users\yossry\Desktop\Examination_System\ExaminationSystem-Api-Project\src\ExaminationSystem.Infrastructure\obj\Debug\net8.0\refint\ExaminationSystem.Infrastructure.dll
 C:\Users\yossry\Desktop\Examination_System\ExaminationSystem-Api-Project\src\ExaminationSystem.Infrastructure\obj\Debug\net8.0\ExaminationSystem.Infrastructure.pdb
 C:\Users\yossry\Desktop\Examination_System\ExaminationSystem-Api-Project\src\ExaminationSystem.Infrastructure\obj\Debug\net8.0\ref\ExaminationSystem.Infrastructure.dll
+C:\Users\yossry\Desktop\Examination_System\ExaminationSystem-Api-Project\src\ExaminationSystem.Infrastructure\obj\Debug\net8.0\ExaminationSystem.Infrastructure.sourcelink.json

@@ -213,9 +213,9 @@ namespace ExaminationSystem.Api.Controllers
 
         #region Reports
         [HttpGet("reports/overview")]
-        public async Task<ActionResult<Application.Abstractions.ReportOverviewDto>> GetReportOverview()
+        public async Task<ActionResult<Application.Abstractions.ReportOverviewDto>> GetReportOverview([FromQuery] string? period = null)
         {
-            var overview = await _service.GetReportOverviewAsync(CurrentUserId);
+            var overview = await _service.GetReportOverviewAsync(CurrentUserId, period);
             return Ok(overview);
         }
 
@@ -233,6 +233,13 @@ namespace ExaminationSystem.Api.Controllers
             if (student == null)
                 return NotFound(new { message = "Student not found" });
             return Ok(student);
+        }
+
+        [HttpGet("reports/exam-results")]
+        public async Task<ActionResult<IEnumerable<Application.Abstractions.ExamResultReportDto>>> GetExamResults()
+        {
+            var results = await _service.GetExamResultsAsync(CurrentUserId);
+            return Ok(results);
         }
         #endregion
     }

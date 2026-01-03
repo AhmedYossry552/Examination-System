@@ -13,3 +13,4 @@ C:\Users\yossry\Desktop\Examination_System\ExaminationSystem-Api-Project\src\Exa
 C:\Users\yossry\Desktop\Examination_System\ExaminationSystem-Api-Project\src\ExaminationSystem.Application\obj\Debug\net8.0\refint\ExaminationSystem.Application.dll
 C:\Users\yossry\Desktop\Examination_System\ExaminationSystem-Api-Project\src\ExaminationSystem.Application\obj\Debug\net8.0\ExaminationSystem.Application.pdb
 C:\Users\yossry\Desktop\Examination_System\ExaminationSystem-Api-Project\src\ExaminationSystem.Application\obj\Debug\net8.0\ref\ExaminationSystem.Application.dll
+C:\Users\yossry\Desktop\Examination_System\ExaminationSystem-Api-Project\src\ExaminationSystem.Application\obj\Debug\net8.0\ExaminationSystem.Application.sourcelink.json
