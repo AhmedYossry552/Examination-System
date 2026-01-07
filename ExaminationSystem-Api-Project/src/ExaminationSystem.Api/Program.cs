@@ -1,3 +1,4 @@
+using System;
 using System.Text;
 using System.Collections.Generic;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -29,7 +30,11 @@ builder.Host.UseSerilog();
 
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+builder.Services.AddSwaggerGen(c =>
+{
+    // Resolve schema conflicts by using full type names for duplicates
+    c.CustomSchemaIds(type => type.FullName?.Replace("+", "_"));
+});
 
 // FluentValidation
 builder.Services.AddFluentValidationAutoValidation();
@@ -77,7 +82,7 @@ builder.Services.AddApiVersioning(o =>
 });
 
 builder.Services.AddHealthChecks()
-    .AddSqlServer(builder.Configuration.GetConnectionString("Default"));
+    .AddSqlServer(builder.Configuration.GetConnectionString("Default") ?? throw new InvalidOperationException("Connection string 'Default' not found"));
 
 builder.Services.AddRateLimiter(options =>
 {
@@ -150,12 +155,27 @@ app.UseExceptionHandler(errorApp =>
     errorApp.Run(async context =>
     {
         var feature = context.Features.Get<IExceptionHandlerFeature>();
-        var status = 500;
+        var exception = feature?.Error;
+        
+        // Map exception types to appropriate HTTP status codes
+        // Handle SqlException with error 50000 (RAISERROR for auth failures) as 401
+        var (status, title) = exception switch
+        {
+            Microsoft.Data.SqlClient.SqlException sqlEx when sqlEx.Number == 50000 
+                && (sqlEx.Message.Contains("Invalid username") || sqlEx.Message.Contains("Invalid password") || sqlEx.Message.Contains("Invalid refresh token"))
+                => (401, "Unauthorized"),
+            UnauthorizedAccessException => (401, "Unauthorized"),
+            KeyNotFoundException => (404, "Not Found"),
+            ArgumentException => (400, "Bad Request"),
+            InvalidOperationException => (400, "Bad Request"),
+            _ => (500, "An unexpected error occurred.")
+        };
+        
         var problem = new
         {
-            title = "An unexpected error occurred.",
+            title = title,
             status = status,
-            detail = app.Environment.IsDevelopment() ? feature?.Error?.Message : null,
+            detail = app.Environment.IsDevelopment() ? exception?.Message : (status == 500 ? null : exception?.Message),
             traceId = context.TraceIdentifier
         };
         context.Response.ContentType = "application/json";

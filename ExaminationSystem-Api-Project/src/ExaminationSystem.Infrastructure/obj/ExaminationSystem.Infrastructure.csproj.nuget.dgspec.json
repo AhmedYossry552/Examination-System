@@ -1,7 +1,7 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\yossry\\Desktop\\Examination_System\\ExaminationSystem-Api-Project\\src\\ExaminationSystem.Infrastructure\\ExaminationSystem.Infrastructure.csproj": {}
+    "c:\\Users\\yossry\\Desktop\\Examination_System\\ExaminationSystem-Api-Project\\src\\ExaminationSystem.Infrastructure\\ExaminationSystem.Infrastructure.csproj": {}
   },
   "projects": {
     "C:\\Users\\yossry\\Desktop\\Examination_System\\ExaminationSystem-Api-Project\\src\\ExaminationSystem.Application\\ExaminationSystem.Application.csproj": {
@@ -33,8 +33,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\yossry\\Desktop\\Examination_System\\ExaminationSystem-Api-Project\\src\\ExaminationSystem.Domain\\ExaminationSystem.Domain.csproj": {
-                "projectPath": "C:\\Users\\yossry\\Desktop\\Examination_System\\ExaminationSystem-Api-Project\\src\\ExaminationSystem.Domain\\ExaminationSystem.Domain.csproj"
+              "c:\\Users\\yossry\\Desktop\\Examination_System\\ExaminationSystem-Api-Project\\src\\ExaminationSystem.Domain\\ExaminationSystem.Domain.csproj": {
+                "projectPath": "c:\\Users\\yossry\\Desktop\\Examination_System\\ExaminationSystem-Api-Project\\src\\ExaminationSystem.Domain\\ExaminationSystem.Domain.csproj"
               }
             }
           }
@@ -106,14 +106,14 @@
         }
       }
     },
-    "C:\\Users\\yossry\\Desktop\\Examination_System\\ExaminationSystem-Api-Project\\src\\ExaminationSystem.Domain\\ExaminationSystem.Domain.csproj": {
+    "c:\\Users\\yossry\\Desktop\\Examination_System\\ExaminationSystem-Api-Project\\src\\ExaminationSystem.Domain\\ExaminationSystem.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\yossry\\Desktop\\Examination_System\\ExaminationSystem-Api-Project\\src\\ExaminationSystem.Domain\\ExaminationSystem.Domain.csproj",
+        "projectUniqueName": "c:\\Users\\yossry\\Desktop\\Examination_System\\ExaminationSystem-Api-Project\\src\\ExaminationSystem.Domain\\ExaminationSystem.Domain.csproj",
         "projectName": "ExaminationSystem.Domain",
-        "projectPath": "C:\\Users\\yossry\\Desktop\\Examination_System\\ExaminationSystem-Api-Project\\src\\ExaminationSystem.Domain\\ExaminationSystem.Domain.csproj",
+        "projectPath": "c:\\Users\\yossry\\Desktop\\Examination_System\\ExaminationSystem-Api-Project\\src\\ExaminationSystem.Domain\\ExaminationSystem.Domain.csproj",
         "packagesPath": "C:\\Users\\yossry\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\yossry\\Desktop\\Examination_System\\ExaminationSystem-Api-Project\\src\\ExaminationSystem.Domain\\obj\\",
+        "outputPath": "c:\\Users\\yossry\\Desktop\\Examination_System\\ExaminationSystem-Api-Project\\src\\ExaminationSystem.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -186,14 +186,14 @@
         }
       }
     },
-    "C:\\Users\\yossry\\Desktop\\Examination_System\\ExaminationSystem-Api-Project\\src\\ExaminationSystem.Infrastructure\\ExaminationSystem.Infrastructure.csproj": {
+    "c:\\Users\\yossry\\Desktop\\Examination_System\\ExaminationSystem-Api-Project\\src\\ExaminationSystem.Infrastructure\\ExaminationSystem.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\yossry\\Desktop\\Examination_System\\ExaminationSystem-Api-Project\\src\\ExaminationSystem.Infrastructure\\ExaminationSystem.Infrastructure.csproj",
+        "projectUniqueName": "c:\\Users\\yossry\\Desktop\\Examination_System\\ExaminationSystem-Api-Project\\src\\ExaminationSystem.Infrastructure\\ExaminationSystem.Infrastructure.csproj",
         "projectName": "ExaminationSystem.Infrastructure",
-        "projectPath": "C:\\Users\\yossry\\Desktop\\Examination_System\\ExaminationSystem-Api-Project\\src\\ExaminationSystem.Infrastructure\\ExaminationSystem.Infrastructure.csproj",
+        "projectPath": "c:\\Users\\yossry\\Desktop\\Examination_System\\ExaminationSystem-Api-Project\\src\\ExaminationSystem.Infrastructure\\ExaminationSystem.Infrastructure.csproj",
         "packagesPath": "C:\\Users\\yossry\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\yossry\\Desktop\\Examination_System\\ExaminationSystem-Api-Project\\src\\ExaminationSystem.Infrastructure\\obj\\",
+        "outputPath": "c:\\Users\\yossry\\Desktop\\Examination_System\\ExaminationSystem-Api-Project\\src\\ExaminationSystem.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -218,8 +218,8 @@
               "C:\\Users\\yossry\\Desktop\\Examination_System\\ExaminationSystem-Api-Project\\src\\ExaminationSystem.Application\\ExaminationSystem.Application.csproj": {
                 "projectPath": "C:\\Users\\yossry\\Desktop\\Examination_System\\ExaminationSystem-Api-Project\\src\\ExaminationSystem.Application\\ExaminationSystem.Application.csproj"
               },
-              "C:\\Users\\yossry\\Desktop\\Examination_System\\ExaminationSystem-Api-Project\\src\\ExaminationSystem.Domain\\ExaminationSystem.Domain.csproj": {
-                "projectPath": "C:\\Users\\yossry\\Desktop\\Examination_System\\ExaminationSystem-Api-Project\\src\\ExaminationSystem.Domain\\ExaminationSystem.Domain.csproj"
+              "c:\\Users\\yossry\\Desktop\\Examination_System\\ExaminationSystem-Api-Project\\src\\ExaminationSystem.Domain\\ExaminationSystem.Domain.csproj": {
+                "projectPath": "c:\\Users\\yossry\\Desktop\\Examination_System\\ExaminationSystem-Api-Project\\src\\ExaminationSystem.Domain\\ExaminationSystem.Domain.csproj"
               }
             }
           }

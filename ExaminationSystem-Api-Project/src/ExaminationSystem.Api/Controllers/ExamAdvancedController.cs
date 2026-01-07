@@ -11,7 +11,7 @@ namespace ExaminationSystem.Api.Controllers
     /// Controller for advanced exam operations
     /// </summary>
     [ApiController]
-    [Route("api/[controller]")]
+    [Route("api/v1/[controller]")]
     [Authorize]
     public class ExamAdvancedController : ControllerBase
     {
@@ -32,7 +32,7 @@ namespace ExaminationSystem.Api.Controllers
         /// Bulk assign students to an exam
         /// </summary>
         [HttpPost("bulk-assign")]
-        [Authorize(Roles = "Admin,Manager,Instructor")]
+        [Authorize(Roles = "Admin,TrainingManager,Instructor")]
         public async Task<IActionResult> BulkAssignStudents([FromBody] BulkAssignStudentsDto dto)
         {
             if (dto == null)
@@ -56,7 +56,7 @@ namespace ExaminationSystem.Api.Controllers
         /// Get random questions by type
         /// </summary>
         [HttpPost("random-questions")]
-        [Authorize(Roles = "Admin,Manager,Instructor")]
+        [Authorize(Roles = "Admin,TrainingManager,Instructor")]
         public async Task<IActionResult> GetRandomQuestions([FromBody] RandomQuestionDto dto)
         {
             if (dto == null)
@@ -74,7 +74,7 @@ namespace ExaminationSystem.Api.Controllers
         {
             // Check if user can access this data
             var currentUserId = GetCurrentUserId();
-            var isAdmin = User.IsInRole("Admin") || User.IsInRole("Manager") || User.IsInRole("Instructor");
+            var isAdmin = User.IsInRole("Admin") || User.IsInRole("TrainingManager") || User.IsInRole("Instructor");
             
             if (!isAdmin && currentUserId != studentId)
                 return Forbid();
@@ -98,7 +98,7 @@ namespace ExaminationSystem.Api.Controllers
         /// Send exam reminder
         /// </summary>
         [HttpPost("{examId}/send-reminder")]
-        [Authorize(Roles = "Admin,Manager,Instructor")]
+        [Authorize(Roles = "Admin,TrainingManager,Instructor")]
         public async Task<IActionResult> SendExamReminder(int examId)
         {
             await _service.NotifyExamReminderAsync(examId);
@@ -109,7 +109,7 @@ namespace ExaminationSystem.Api.Controllers
         /// Notify student of exam assignment
         /// </summary>
         [HttpPost("{examId}/notify-assigned/{studentId}")]
-        [Authorize(Roles = "Admin,Manager,Instructor")]
+        [Authorize(Roles = "Admin,TrainingManager,Instructor")]
         public async Task<IActionResult> NotifyExamAssigned(int examId, int studentId)
         {
             await _service.NotifyExamAssignedAsync(examId, studentId);
@@ -120,7 +120,7 @@ namespace ExaminationSystem.Api.Controllers
         /// Notify student of grade release
         /// </summary>
         [HttpPost("{examId}/notify-grade/{studentId}")]
-        [Authorize(Roles = "Admin,Manager,Instructor")]
+        [Authorize(Roles = "Admin,TrainingManager,Instructor")]
         public async Task<IActionResult> NotifyGradeReleased(int examId, int studentId)
         {
             await _service.NotifyGradeReleasedAsync(examId, studentId);

@@ -10,7 +10,7 @@ namespace ExaminationSystem.Api.Controllers
     /// Controller for advanced system features
     /// </summary>
     [ApiController]
-    [Route("api/[controller]")]
+    [Route("api/v1/[controller]")]
     [Authorize]
     public class AdvancedFeaturesController : ControllerBase
     {

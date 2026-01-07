@@ -243,9 +243,10 @@ namespace ExaminationSystem.Api.Validation
         {
             RuleFor(x => x.QuestionText).MaximumLength(2000).When(x => x.QuestionText != null);
             RuleFor(x => x.DifficultyLevel).Must(level => 
-                level.Equals("Easy", StringComparison.OrdinalIgnoreCase) ||
-                level.Equals("Medium", StringComparison.OrdinalIgnoreCase) ||
-                level.Equals("Hard", StringComparison.OrdinalIgnoreCase))
+                level != null && (
+                    level.Equals("Easy", StringComparison.OrdinalIgnoreCase) ||
+                    level.Equals("Medium", StringComparison.OrdinalIgnoreCase) ||
+                    level.Equals("Hard", StringComparison.OrdinalIgnoreCase)))
                 .When(x => x.DifficultyLevel != null)
                 .WithMessage("DifficultyLevel must be Easy, Medium, or Hard.");
             RuleFor(x => x.Points).GreaterThan(0).When(x => x.Points.HasValue);

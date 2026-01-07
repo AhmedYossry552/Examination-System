@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "4qsZnuI1qCk=",
+  "dgSpecHash": "AoS26SqRzNk=",
   "success": true,
-  "projectFilePath": "C:\\Users\\yossry\\Desktop\\Examination_System\\ExaminationSystem-Api-Project\\src\\ExaminationSystem.Infrastructure\\ExaminationSystem.Infrastructure.csproj",
+  "projectFilePath": "c:\\Users\\yossry\\Desktop\\Examination_System\\ExaminationSystem-Api-Project\\src\\ExaminationSystem.Infrastructure\\ExaminationSystem.Infrastructure.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\yossry\\.nuget\\packages\\azure.core\\1.47.1\\azure.core.1.47.1.nupkg.sha512",
     "C:\\Users\\yossry\\.nuget\\packages\\azure.identity\\1.14.2\\azure.identity.1.14.2.nupkg.sha512",

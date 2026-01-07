@@ -15,7 +15,7 @@ namespace ExaminationSystem.Application.Abstractions
         Task<PaginatedResult<PaginatedQuestionDto>> GetQuestionsPaginatedAsync(int pageNumber, int pageSize, int? courseId = null);
 
         // Remedial Exams
-        Task<IEnumerable<RemedialCandidateDto>> GetRemedialCandidatesAsync(int? courseId = null);
+        Task<IEnumerable<RemedialCandidateDto>> GetRemedialCandidatesAsync(int examId);
         Task<RemedialProgressDto> GetRemedialProgressAsync();
         Task<IEnumerable<StudentRemedialHistoryDto>> GetStudentRemedialHistoryAsync(int studentId);
         Task AutoAssignRemedialExamsAsync();
@@ -114,7 +114,7 @@ namespace ExaminationSystem.Application.Abstractions
         Task<(IEnumerable<PaginatedQuestionDto> Items, int TotalCount)> GetQuestionsPaginatedAsync(int pageNumber, int pageSize, int? courseId);
 
         // Remedial Exams
-        Task<IEnumerable<RemedialCandidateDto>> GetRemedialCandidatesAsync(int? courseId);
+        Task<IEnumerable<RemedialCandidateDto>> GetRemedialCandidatesAsync(int examId);
         Task<RemedialProgressDto> GetRemedialProgressAsync();
         Task<IEnumerable<StudentRemedialHistoryDto>> GetStudentRemedialHistoryAsync(int studentId);
         Task AutoAssignRemedialExamsAsync();

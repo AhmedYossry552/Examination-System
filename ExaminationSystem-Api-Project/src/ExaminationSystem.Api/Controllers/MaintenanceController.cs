@@ -9,7 +9,7 @@ namespace ExaminationSystem.Api.Controllers
     /// Controller for system maintenance and cleanup jobs
     /// </summary>
     [ApiController]
-    [Route("api/[controller]")]
+    [Route("api/v1/[controller]")]
     [Authorize(Roles = "Admin")]
     public class MaintenanceController : ControllerBase
     {

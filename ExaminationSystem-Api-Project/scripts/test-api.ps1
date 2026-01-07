@@ -107,10 +107,11 @@ function Test-StudentEndpoints {
 }
 
 Write-Host "=== Authenticating users ===" -ForegroundColor Cyan
+# Using usernames from the advanced test data (run Insert_Advanced_Test_Data.sql)
 $adminLogin = Login-User -Username 'admin' -Password 'Admin@123'
-$managerLogin = Login-User -Username 'manager1' -Password 'Manager@123'
-$instructorLogin = Login-User -Username 'instructor1' -Password 'Inst@123'
-$studentLogin = Login-User -Username 'student1' -Password 'Stud@123'
+$managerLogin = Login-User -Username 'manager.training' -Password 'Manager@123'
+$instructorLogin = Login-User -Username 'dr.ahmed' -Password 'Inst@123'
+$studentLogin = Login-User -Username 'std.youssef' -Password 'Stud@123'
 
 $adminToken = $adminLogin.Body.AccessToken
 $managerToken = $managerLogin.Body.AccessToken

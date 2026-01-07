@@ -20,8 +20,8 @@ namespace ExaminationSystem.Infrastructure.Repositories
 
         public AdvancedFeaturesRepository(IConfiguration configuration)
         {
-            _connectionString = configuration.GetConnectionString("DefaultConnection")
-                ?? throw new InvalidOperationException("Connection string not found");
+            _connectionString = configuration.GetConnectionString("Default")
+                ?? throw new InvalidOperationException("Connection string 'Default' not found");
         }
 
         private SqlConnection CreateConnection() => new SqlConnection(_connectionString);
@@ -37,7 +37,7 @@ namespace ExaminationSystem.Infrastructure.Repositories
             parameters.Add("@PageNumber", pageNumber);
             parameters.Add("@PageSize", pageSize);
             parameters.Add("@SearchTerm", searchTerm ?? "");
-            parameters.Add("@TotalCount", dbType: DbType.Int32, direction: ParameterDirection.Output);
+            parameters.Add("@TotalRecords", dbType: DbType.Int32, direction: ParameterDirection.Output);
 
             var students = await connection.QueryAsync<PaginatedStudentDto>(
                 "Academic.SP_GetStudents_Paginated",
@@ -45,7 +45,7 @@ namespace ExaminationSystem.Infrastructure.Repositories
                 commandType: CommandType.StoredProcedure
             );
 
-            var totalCount = parameters.Get<int>("@TotalCount");
+            var totalCount = parameters.Get<int>("@TotalRecords");
             return (students, totalCount);
         }
 
@@ -58,7 +58,7 @@ namespace ExaminationSystem.Infrastructure.Repositories
             parameters.Add("@PageNumber", pageNumber);
             parameters.Add("@PageSize", pageSize);
             parameters.Add("@SearchTerm", searchTerm ?? "");
-            parameters.Add("@TotalCount", dbType: DbType.Int32, direction: ParameterDirection.Output);
+            parameters.Add("@TotalRecords", dbType: DbType.Int32, direction: ParameterDirection.Output);
 
             var exams = await connection.QueryAsync<PaginatedExamDto>(
                 "Exam.SP_GetExams_Paginated",
@@ -66,7 +66,7 @@ namespace ExaminationSystem.Infrastructure.Repositories
                 commandType: CommandType.StoredProcedure
             );
 
-            var totalCount = parameters.Get<int>("@TotalCount");
+            var totalCount = parameters.Get<int>("@TotalRecords");
             return (exams, totalCount);
         }
 
@@ -79,7 +79,7 @@ namespace ExaminationSystem.Infrastructure.Repositories
             parameters.Add("@PageNumber", pageNumber);
             parameters.Add("@PageSize", pageSize);
             parameters.Add("@CourseId", courseId);
-            parameters.Add("@TotalCount", dbType: DbType.Int32, direction: ParameterDirection.Output);
+            parameters.Add("@TotalRecords", dbType: DbType.Int32, direction: ParameterDirection.Output);
 
             var questions = await connection.QueryAsync<PaginatedQuestionDto>(
                 "Exam.SP_GetQuestions_Paginated",
@@ -87,7 +87,7 @@ namespace ExaminationSystem.Infrastructure.Repositories
                 commandType: CommandType.StoredProcedure
             );
 
-            var totalCount = parameters.Get<int>("@TotalCount");
+            var totalCount = parameters.Get<int>("@TotalRecords");
             return (questions, totalCount);
         }
 
@@ -95,13 +95,13 @@ namespace ExaminationSystem.Infrastructure.Repositories
 
         #region Remedial Exams
 
-        public async Task<IEnumerable<RemedialCandidateDto>> GetRemedialCandidatesAsync(int? courseId)
+        public async Task<IEnumerable<RemedialCandidateDto>> GetRemedialCandidatesAsync(int examId)
         {
             using var connection = CreateConnection();
             
             return await connection.QueryAsync<RemedialCandidateDto>(
                 "Exam.SP_GetRemedialExamCandidates",
-                new { CourseId = courseId },
+                new { ExamID = examId },
                 commandType: CommandType.StoredProcedure
             );
         }
@@ -110,10 +110,41 @@ namespace ExaminationSystem.Infrastructure.Repositories
         {
             using var connection = CreateConnection();
             
-            return await connection.QueryFirstOrDefaultAsync<RemedialProgressDto>(
-                "Exam.SP_GetRemedialExamProgress",
-                commandType: CommandType.StoredProcedure
-            ) ?? new RemedialProgressDto();
+            // Custom query to get overall remedial statistics
+            var sql = @"
+                SELECT 
+                    (SELECT COUNT(*) FROM Exam.StudentExam se
+                     INNER JOIN Exam.Exam e ON se.ExamID = e.ExamID
+                     WHERE se.SubmissionTime IS NOT NULL 
+                       AND se.TotalScore < e.PassMarks
+                       AND e.ExamType = 'Normal') AS TotalCandidates,
+                    (SELECT COUNT(*) FROM Exam.StudentExam se
+                     INNER JOIN Exam.Exam e ON se.ExamID = e.ExamID
+                     WHERE se.SubmissionTime IS NOT NULL 
+                       AND se.TotalScore < e.PassMarks
+                       AND e.ExamType = 'Normal'
+                       AND NOT EXISTS (
+                           SELECT 1 FROM Exam.StudentExam se2
+                           INNER JOIN Exam.Exam e2 ON se2.ExamID = e2.ExamID
+                           WHERE se2.StudentID = se.StudentID
+                             AND e2.CourseID = e.CourseID
+                             AND e2.ExamType = 'Remedial'
+                       )) AS PendingCount,
+                    (SELECT COUNT(DISTINCT se.StudentID) FROM Exam.StudentExam se
+                     INNER JOIN Exam.Exam e ON se.ExamID = e.ExamID
+                     WHERE e.ExamType = 'Remedial') AS TotalAssigned,
+                    (SELECT COUNT(DISTINCT se.StudentID) FROM Exam.StudentExam se
+                     INNER JOIN Exam.Exam e ON se.ExamID = e.ExamID
+                     WHERE e.ExamType = 'Remedial' AND se.SubmissionTime IS NOT NULL) AS TotalCompleted,
+                    (SELECT COUNT(DISTINCT se.StudentID) FROM Exam.StudentExam se
+                     INNER JOIN Exam.Exam e ON se.ExamID = e.ExamID
+                     WHERE e.ExamType = 'Remedial' 
+                       AND se.SubmissionTime IS NOT NULL
+                       AND se.TotalScore >= e.PassMarks) AS TotalPassed
+            ";
+            
+            return await connection.QueryFirstOrDefaultAsync<RemedialProgressDto>(sql) 
+                ?? new RemedialProgressDto();
         }
 
         public async Task<IEnumerable<StudentRemedialHistoryDto>> GetStudentRemedialHistoryAsync(int studentId)
@@ -393,8 +424,8 @@ namespace ExaminationSystem.Infrastructure.Repositories
             {
                 Branches = (await multi.ReadAsync<LookupItemDto>()).ToList(),
                 Tracks = (await multi.ReadAsync<LookupItemDto>()).ToList(),
-                Courses = (await multi.ReadAsync<LookupItemDto>()).ToList(),
-                Intakes = (await multi.ReadAsync<LookupItemDto>()).ToList()
+                Intakes = (await multi.ReadAsync<LookupItemDto>()).ToList(),
+                Courses = (await multi.ReadAsync<LookupItemDto>()).ToList()
             };
 
             return result;

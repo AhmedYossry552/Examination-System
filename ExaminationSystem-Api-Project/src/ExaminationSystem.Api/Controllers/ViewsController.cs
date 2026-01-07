@@ -8,7 +8,7 @@ namespace ExaminationSystem.Api.Controllers
     /// Controller for database views - provides read-only access to aggregated data
     /// </summary>
     [ApiController]
-    [Route("api/[controller]")]
+    [Route("api/v1/[controller]")]
     public class ViewsController : ControllerBase
     {
         private readonly IViewsService _viewsService;

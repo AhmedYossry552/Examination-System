@@ -11,7 +11,7 @@ namespace ExaminationSystem.Api.Controllers
     /// Controller for academic entity management (Branches, Tracks, Intakes)
     /// </summary>
     [ApiController]
-    [Route("api/[controller]")]
+    [Route("api/v1/[controller]")]
     [Authorize(Roles = "Admin,Manager")]
     public class AcademicManagementController : ControllerBase
     {

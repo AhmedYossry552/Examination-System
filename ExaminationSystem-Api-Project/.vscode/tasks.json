@@ -1,0 +1,13 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "API Quick Test",
+			"type": "shell",
+			"command": "powershell -ExecutionPolicy Bypass -File scripts/quick-test.ps1",
+			"isBackground": false,
+			"problemMatcher": [],
+			"group": "test"
+		}
+	]
+}

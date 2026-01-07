@@ -67,9 +67,9 @@ namespace ExaminationSystem.Infrastructure.Services
 
         #region Remedial Exams
 
-        public async Task<IEnumerable<RemedialCandidateDto>> GetRemedialCandidatesAsync(int? courseId = null)
+        public async Task<IEnumerable<RemedialCandidateDto>> GetRemedialCandidatesAsync(int examId)
         {
-            return await _repository.GetRemedialCandidatesAsync(courseId);
+            return await _repository.GetRemedialCandidatesAsync(examId);
         }
 
         public async Task<RemedialProgressDto> GetRemedialProgressAsync()

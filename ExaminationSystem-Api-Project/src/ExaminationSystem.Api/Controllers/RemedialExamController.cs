@@ -10,8 +10,8 @@ namespace ExaminationSystem.Api.Controllers
     /// Controller for remedial exam management
     /// </summary>
     [ApiController]
-    [Route("api/[controller]")]
-    [Authorize(Roles = "Admin,Manager,Instructor")]
+    [Route("api/v1/[controller]")]
+    [Authorize(Roles = "Admin,TrainingManager,Instructor")]
     public class RemedialExamController : ControllerBase
     {
         private readonly IAdvancedFeaturesService _service;
@@ -25,9 +25,9 @@ namespace ExaminationSystem.Api.Controllers
         /// Get candidates eligible for remedial exams
         /// </summary>
         [HttpGet("candidates")]
-        public async Task<IActionResult> GetCandidates([FromQuery] int? courseId = null)
+        public async Task<IActionResult> GetCandidates([FromQuery] int examId)
         {
-            var candidates = await _service.GetRemedialCandidatesAsync(courseId);
+            var candidates = await _service.GetRemedialCandidatesAsync(examId);
             return Ok(candidates);
         }
 
@@ -55,7 +55,7 @@ namespace ExaminationSystem.Api.Controllers
         /// Auto-assign remedial exams to eligible students
         /// </summary>
         [HttpPost("auto-assign")]
-        [Authorize(Roles = "Admin,Manager")]
+        [Authorize(Roles = "Admin,TrainingManager")]
         public async Task<IActionResult> AutoAssign()
         {
             await _service.AutoAssignRemedialExamsAsync();

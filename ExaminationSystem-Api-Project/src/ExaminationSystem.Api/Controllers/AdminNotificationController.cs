@@ -10,7 +10,7 @@ namespace ExaminationSystem.Api.Controllers
     /// Controller for admin notification management
     /// </summary>
     [ApiController]
-    [Route("api/admin/notifications")]
+    [Route("api/v1/admin/notifications")]
     [Authorize(Roles = "Admin,Manager")]
     public class AdminNotificationController : ControllerBase
     {

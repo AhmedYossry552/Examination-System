@@ -17,17 +17,17 @@ namespace ExaminationSystem.Application.Abstractions
         Task<IEnumerable<AuditLogDto>> GetAuditLogsAsync(string? eventType, string? status, DateTime? dateFrom, DateTime? dateTo, int page, int pageSize);
     }
 
+    // Properties must match SP EventStore.SP_GetSystemActivity output columns exactly
     public record AuditLogDto(
-        long EventId,
-        int UserId,
-        string UserName,
-        string UserType,
+        long EventID,
         string EventType,
         string AggregateType,
-        string AggregateId,
-        string? EventData,
-        string? IpAddress,
+        string AggregateID,
         DateTime OccurredAt,
-        string Status
+        int UserID,
+        string Username,
+        string UserType,
+        string? IPAddress,
+        int TotalRecords
     );
 }

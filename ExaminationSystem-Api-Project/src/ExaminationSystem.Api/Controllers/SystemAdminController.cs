@@ -10,7 +10,7 @@ namespace ExaminationSystem.Api.Controllers
     /// Controller for system administration
     /// </summary>
     [ApiController]
-    [Route("api/[controller]")]
+    [Route("api/v1/[controller]")]
     [Authorize(Roles = "Admin")]
     public class SystemAdminController : ControllerBase
     {

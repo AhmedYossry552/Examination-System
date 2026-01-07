@@ -11,7 +11,7 @@ namespace ExaminationSystem.Api.Controllers
     /// Controller for event sourcing and audit trail
     /// </summary>
     [ApiController]
-    [Route("api/[controller]")]
+    [Route("api/v1/[controller]")]
     [Authorize]
     public class EventStoreController : ControllerBase
     {
@@ -78,7 +78,7 @@ namespace ExaminationSystem.Api.Controllers
         /// Get system activity for the last N days
         /// </summary>
         [HttpGet("activity")]
-        [Authorize(Roles = "Admin,Manager")]
+        [Authorize(Roles = "Admin,TrainingManager")]
         public async Task<IActionResult> GetSystemActivity([FromQuery] int days = 7)
         {
             var activity = await _service.GetSystemActivityAsync(days);
@@ -89,7 +89,7 @@ namespace ExaminationSystem.Api.Controllers
         /// Get event statistics
         /// </summary>
         [HttpGet("statistics")]
-        [Authorize(Roles = "Admin,Manager")]
+        [Authorize(Roles = "Admin,TrainingManager")]
         public async Task<IActionResult> GetStatistics()
         {
             var stats = await _service.GetEventStatisticsAsync();

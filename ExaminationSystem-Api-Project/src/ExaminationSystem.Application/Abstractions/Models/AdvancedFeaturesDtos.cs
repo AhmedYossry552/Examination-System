@@ -57,25 +57,28 @@ namespace ExaminationSystem.Application.Abstractions.Models
     }
 
     // ============== Remedial Exam DTOs ==============
+    /// <summary>
+    /// DTO for remedial exam candidates - maps to SP_GetRemedialExamCandidates output
+    /// </summary>
     public class RemedialCandidateDto
     {
         public int StudentID { get; set; }
         public string StudentName { get; set; } = string.Empty;
-        public int ExamID { get; set; }
-        public string ExamName { get; set; } = string.Empty;
-        public string CourseName { get; set; } = string.Empty;
-        public decimal Score { get; set; }
+        public string Email { get; set; } = string.Empty;
+        public decimal TotalScore { get; set; }
         public decimal PassMarks { get; set; }
-        public bool IsEligible { get; set; }
+        public decimal TotalMarks { get; set; }
+        public DateTime? SubmissionTime { get; set; }
+        public string Status { get; set; } = string.Empty;
     }
 
     public class RemedialProgressDto
     {
         public int TotalCandidates { get; set; }
-        public int AssignedCount { get; set; }
-        public int CompletedCount { get; set; }
-        public int PassedCount { get; set; }
-        public decimal PassRate { get; set; }
+        public int PendingCount { get; set; }
+        public int TotalAssigned { get; set; }
+        public int TotalCompleted { get; set; }
+        public int TotalPassed { get; set; }
     }
 
     public class StudentRemedialHistoryDto
@@ -244,9 +247,11 @@ namespace ExaminationSystem.Application.Abstractions.Models
 
     public class LookupItemDto
     {
-        public int ID { get; set; }
-        public string Name { get; set; } = string.Empty;
-        public string? Description { get; set; }
+        public int Value { get; set; }
+        public string Label { get; set; } = string.Empty;
+        public string? Type { get; set; }
+        public int? ParentId { get; set; }
+        public string? Code { get; set; }
     }
 
     // ============== Global Search DTO ==============

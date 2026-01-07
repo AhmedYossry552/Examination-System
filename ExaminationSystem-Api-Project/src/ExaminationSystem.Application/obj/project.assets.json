@@ -297,8 +297,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\yossry\\Desktop\\Examination_System\\ExaminationSystem-Api-Project\\src\\ExaminationSystem.Domain\\ExaminationSystem.Domain.csproj": {
-              "projectPath": "C:\\Users\\yossry\\Desktop\\Examination_System\\ExaminationSystem-Api-Project\\src\\ExaminationSystem.Domain\\ExaminationSystem.Domain.csproj"
+            "c:\\Users\\yossry\\Desktop\\Examination_System\\ExaminationSystem-Api-Project\\src\\ExaminationSystem.Domain\\ExaminationSystem.Domain.csproj": {
+              "projectPath": "c:\\Users\\yossry\\Desktop\\Examination_System\\ExaminationSystem-Api-Project\\src\\ExaminationSystem.Domain\\ExaminationSystem.Domain.csproj"
             }
           }
         }

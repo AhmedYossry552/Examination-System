@@ -11,7 +11,7 @@ namespace ExaminationSystem.Api.Controllers
     /// Controller for API key management
     /// </summary>
     [ApiController]
-    [Route("api/[controller]")]
+    [Route("api/v1/[controller]")]
     [Authorize(Roles = "Admin")]
     public class ApiKeyController : ControllerBase
     {

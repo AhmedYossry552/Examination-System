@@ -1,0 +1,441 @@
+====================================================================
+EXAMINATION SYSTEM DATABASE - OBJECT DOCUMENTATION
+====================================================================
+
+Project: Examination System Database
+Database: ExaminationSystemDB
+Version: 1.0
+Date: 2024
+
+====================================================================
+SCHEMAS
+====================================================================
+
+1. Academic - Academic structure and course management
+2. Exam - Examination and question pool management
+3. Security - User management and audit logging
+4. EventStore - Event sourcing and audit trail (ADVANCED!)
+5. Analytics - Smart analytics and predictions (ADVANCED!)
+
+====================================================================
+TABLES
+====================================================================
+
+ACADEMIC SCHEMA:
+----------------
+1. Academic.Branch
+   - Stores branch information (Cairo, Alexandria, etc.)
+   - Fields: BranchID, BranchName, BranchLocation, Manager info
+
+2. Academic.Track
+   - Training tracks within branches (.NET, Mobile, etc.)
+   - Fields: TrackID, TrackName, BranchID, Duration
+
+3. Academic.Intake
+   - Student intake batches per quarter
+   - Fields: IntakeID, IntakeName, Year, Quarter, Dates
+
+4. Academic.Course
+   - Course catalog
+   - Fields: CourseID, CourseName, Code, Degrees, Hours
+
+5. Academic.Instructor
+   - Instructor information
+   - Fields: InstructorID, UserID, Specialization, IsTrainingManager
+
+6. Academic.Student
+   - Student information
+   - Fields: StudentID, UserID, IntakeID, BranchID, TrackID, GPA
+
+7. Academic.CourseInstructor
+   - Assignment of instructors to courses
+   - Fields: CourseInstructorID, InstructorID, CourseID, Intake/Branch/Track
+
+8. Academic.StudentCourse
+   - Student enrollment in courses
+   - Fields: StudentCourseID, StudentID, CourseID, FinalGrade, IsPassed
+
+EXAM SCHEMA:
+------------
+9. Exam.Question
+   - Question pool
+   - Fields: QuestionID, CourseID, InstructorID, Text, Type, Difficulty
+
+10. Exam.QuestionOption
+    - Options for multiple choice questions
+    - Fields: OptionID, QuestionID, OptionText, IsCorrect
+
+11. Exam.QuestionAnswer
+    - Correct answers for TrueFalse and Text questions
+    - Fields: AnswerID, QuestionID, CorrectAnswer, Pattern (regex)
+
+12. Exam.Exam
+    - Exam definitions
+    - Fields: ExamID, CourseID, InstructorID, Name, Type, Marks, Duration, Dates
+
+13. Exam.ExamQuestion
+    - Questions included in specific exams
+    - Fields: ExamQuestionID, ExamID, QuestionID, Order, Marks
+
+14. Exam.StudentExam
+    - Student assignment to exams
+    - Fields: StudentExamID, StudentID, ExamID, Times, Score, IsPassed
+
+15. Exam.StudentAnswer
+    - Student answers to questions
+    - Fields: StudentAnswerID, StudentExamID, QuestionID, Answer, Marks, IsCorrect
+
+SECURITY SCHEMA:
+----------------
+16. Security.User
+    - Base user accounts for all system users
+    - Fields: UserID, Username, PasswordHash, Email, Name, UserType
+
+17. Security.AuditLog
+    - Audit trail for critical operations
+    - Fields: AuditID, TableName, Operation, RecordID, Values, Date
+
+18. Security.UserSessions (ADVANCED!)
+    - JWT-like session management with multi-device support
+    - Fields: SessionID, UserID, SessionToken, IPAddress, LastActivity
+
+19. Security.Notifications (ADVANCED!)
+    - Real-time in-app notification system
+    - Fields: NotificationID, UserID, Type, Title, Message, Priority
+
+20. Security.EmailQueue (ADVANCED!)
+    - Asynchronous email queue with retry logic
+    - Fields: EmailID, ToEmail, Subject, Body, Status, Priority
+
+21. Security.PasswordResetTokens (ADVANCED!)
+    - Secure password reset tokens
+    - Fields: TokenID, UserID, Token, ExpiryDate
+
+22. Security.SystemSettings (ADVANCED!)
+    - Dynamic system configuration
+    - Fields: SettingID, Category, SettingKey, SettingValue
+
+EVENTSTORE SCHEMA (ADVANCED!):
+-------------------------------
+23. EventStore.Events
+    - Complete event sourcing - tracks every system action
+    - Fields: EventID, AggregateID, AggregateType, EventType, EventData
+
+24. EventStore.Snapshots
+    - Performance snapshots for event replay
+    - Fields: SnapshotID, AggregateID, SnapshotData, CreatedAt
+
+====================================================================
+STORED PROCEDURES (110+ TOTAL)
+====================================================================
+
+ADMIN PROCEDURES (7):
+---------------------
+1. Security.SP_Admin_CreateUser - Creates new user accounts
+2. Security.SP_Admin_UpdateUser - Updates user information
+3. Security.SP_Admin_ChangePassword - User changes own password
+4. Security.SP_Admin_ResetPassword - Admin resets user password
+5. Security.SP_Admin_DeleteUser - Soft deletes user
+6. Security.SP_Admin_AuthenticateUser - User login authentication
+7. Security.SP_Admin_GetSystemStatistics - System-wide statistics
+
+TRAINING MANAGER PROCEDURES (10):
+----------------------------------
+8. Academic.SP_Course_Add - Adds new course
+9. Academic.SP_Course_Update - Updates course
+10. Academic.SP_Branch_Add - Adds new branch
+11. Academic.SP_Track_Add - Adds new track
+12. Academic.SP_Intake_Add - Adds new intake
+13. Academic.SP_Course_GetAll - Lists all courses
+14. Academic.SP_Branch_GetAll - Lists all branches
+15. Academic.SP_Track_GetByBranch - Gets tracks by branch
+16. Academic.SP_Intake_GetAll - Lists all intakes
+17. Academic.SP_Student_GetByIntakeBranchTrack - Filters students
+
+STUDENT PROCEDURES (8):
+-----------------------
+18. Academic.SP_Student_Add - Adds new student
+19. Academic.SP_Student_Update - Updates student info
+20. Academic.SP_Student_EnrollInCourse - Enrolls student in course
+21. Exam.SP_Student_GetAvailableExams - Lists available exams
+22. Exam.SP_Student_StartExam - Starts exam session
+23. Exam.SP_Student_SubmitAnswer - Submits answer to question
+24. Exam.SP_Student_SubmitExam - Submits entire exam
+25. Exam.SP_Student_GetExamResults - Gets exam results
+26. Academic.SP_Student_GetCourseGrades - Gets course grades
+
+INSTRUCTOR PROCEDURES (13):
+----------------------------
+27. Academic.SP_Instructor_Add - Adds new instructor
+28. Academic.SP_Instructor_AssignToCourse - Assigns to course
+29. Academic.SP_Instructor_GetMyCourses - Lists instructor's courses
+30. Academic.SP_Instructor_GetCourseStudents - Lists course students
+31. Academic.SP_Instructor_GetExamsToGrade - Lists exams needing grading
+32. Academic.SP_Instructor_GradeTextAnswer - Manually grades text answer
+33. Academic.SP_Instructor_GetExamStatistics - Gets exam statistics
+34. Academic.SP_Instructor_UpdateCourseFinalGrades - Updates final grades
+
+QUESTION PROCEDURES (9):
+------------------------
+35. Exam.SP_Question_Add - Adds new question
+36. Exam.SP_Question_AddOption - Adds option to multiple choice
+37. Exam.SP_Question_AddAnswer - Adds answer to TrueFalse/Text
+38. Exam.SP_Question_Update - Updates question
+39. Exam.SP_Question_Delete - Deletes question (soft)
+40. Exam.SP_Question_GetByCourse - Gets questions by course
+41. Exam.SP_Question_GetWithOptions - Gets question with options
+42. Exam.SP_Question_GetRandomByType - Gets random questions
+43. Exam.SP_Question_GetStatistics - Gets question pool statistics
+
+EXAM PROCEDURES (10):
+---------------------
+44. Exam.SP_Exam_Create - Creates new exam
+45. Exam.SP_Exam_AddQuestion - Adds question to exam
+46. Exam.SP_Exam_GenerateRandom - Generates exam with random questions
+47. Exam.SP_Exam_AssignToStudents - Assigns exam to specific students
+48. Exam.SP_Exam_AssignToAllCourseStudents - Assigns to all students
+49. Exam.SP_Exam_GetQuestions - Gets exam questions
+50. Exam.SP_Exam_Update - Updates exam details
+51. Exam.SP_Exam_Delete - Deletes exam (soft)
+
+BACKUP PROCEDURE:
+-----------------
+52. Security.SP_Admin_ManualBackup - Manual database backup
+
+EVENT SOURCING PROCEDURES (9) - ADVANCED!:
+-------------------------------------------
+53. EventStore.SP_AppendEvent - Logs event to event store
+54. EventStore.SP_GetAggregateEvents - Gets events for aggregate
+55. EventStore.SP_GetUserTimeline - User activity timeline
+56. EventStore.SP_GetSystemActivity - System-wide activity
+57. EventStore.SP_GetStudentExamJourney - Student exam journey
+58. EventStore.SP_GetCorrelatedEvents - Gets related events
+59. EventStore.SP_CreateSnapshot - Creates aggregate snapshot
+60. EventStore.SP_GetEventStatistics - Event statistics
+61. EventStore.SP_ArchiveOldEvents - Archives old events
+
+REMEDIAL EXAM PROCEDURES (4) - ADVANCED!:
+------------------------------------------
+62. Exam.SP_AutoAssignRemedialExams - Auto-assigns remedial exams
+63. Exam.SP_GetRemedialExamCandidates - Gets failed students
+64. Exam.SP_GetRemedialExamProgress - Tracks remedial progress
+65. Exam.SP_GetStudentRemedialHistory - Student remedial history
+
+SMART ANALYTICS PROCEDURES (4) - ADVANCED!:
+--------------------------------------------
+66. Analytics.SP_AnalyzeQuestionDifficulty - Question analysis
+67. Analytics.SP_PredictStudentPerformance - Performance prediction
+68. Analytics.SP_IdentifyAtRiskStudents - Early warning system
+69. Analytics.SP_GetCoursePerformanceDashboard - Course analytics
+
+SESSION MANAGEMENT (Enhanced):
+-------------------------------
+70. Security.SP_CreateUserSession - Creates new session
+71. Security.SP_ValidateSession - Validates session token
+72. Security.SP_RefreshSession - Refreshes session expiry
+73. Security.SP_EndUserSession - Ends specific session
+74. Security.SP_EndAllUserSessions - Ends all user sessions
+75. Security.SP_GetUserSessions - Gets user sessions
+76. Security.SP_CleanupExpiredSessions - Cleanup expired sessions
+77. Security.SP_GetSessionHistory - Session audit history
+
+NOTIFICATION SYSTEM (Enhanced):
+--------------------------------
+78. Security.SP_CreateNotification - Creates notification
+79. Security.SP_GetUserNotifications - Gets user notifications
+80. Security.SP_MarkNotificationAsRead - Marks as read
+81. Security.SP_DeleteNotification - Deletes notification
+82. Security.SP_GetUnreadNotificationCount - Unread count
+83. Security.SP_CleanupOldNotifications - Cleanup old notifications
+84. Security.SP_SendExamAssignedNotification - Auto-notification
+85. Security.SP_SendGradeReleasedNotification - Auto-notification
+86. Security.SP_SendExamReminderNotification - Auto-notification
+87. Security.SP_SendPasswordResetNotification - Auto-notification
+88. Security.SP_SendBulkNotifications - Bulk notifications
+
+EMAIL QUEUE SYSTEM (Enhanced):
+-------------------------------
+89. Security.SP_AddToEmailQueue - Adds email to queue
+90. Security.SP_ProcessEmailQueue - Processes queue
+91. Security.SP_MarkEmailAsSent - Marks email sent
+92. Security.SP_MarkEmailAsFailed - Marks email failed
+93. Security.SP_SendWelcomeEmail - Welcome email
+94. Security.SP_SendExamAssignmentEmail - Exam email
+95. Security.SP_SendGradeEmail - Grade notification
+96. Security.SP_SendPasswordResetEmail - Reset email
+97. Security.SP_SendExamReminderEmail - Reminder email
+98. Security.SP_ScheduleEmail - Schedule email
+99. Security.SP_GetEmailQueueStatus - Queue status
+100. Security.SP_GetFailedEmails - Failed emails
+101. Security.SP_CleanupSentEmails - Cleanup sent emails
+
+UTILITY PROCEDURES (6):
+-----------------------
+102. Academic.SP_GetStudentsPaginated - Paginated students
+103. Exam.SP_GetExamsPaginated - Paginated exams
+104. Exam.SP_GetQuestionsPaginated - Paginated questions
+105. Academic.SP_GetLookupData - Dropdown data
+106. Security.SP_GetDashboardStatistics - Dashboard stats
+107. Exam.SP_GetStudentDashboard - Student dashboard
+
+API RESPONSE HELPERS (3):
+-------------------------
+108. Exam.SP_GetStudentExamWithQuestions - Complete exam data
+109. Exam.SP_GetExamResultsWithDetails - Exam results
+110. Academic.SP_GetInstructorExamReport - Instructor report
+
+====================================================================
+FUNCTIONS (15 TOTAL)
+====================================================================
+
+SCALAR FUNCTIONS (8):
+---------------------
+1. Exam.FN_CalculateExamGrade - Calculates percentage grade
+2. Academic.FN_GetStudentCourseGrade - Gets total course grade
+3. Academic.FN_IsInstructorTeachingCourse - Checks instructor assignment
+4. Exam.FN_IsExamAvailable - Checks exam availability
+5. Exam.FN_GetExamDurationRemaining - Calculates remaining time
+6. Academic.FN_GetStudentGPA - Calculates student GPA
+7. Exam.FN_TextAnswerSimilarity - Text answer matching (Bonus)
+8. Academic.FN_GetAcademicYear - Determines academic year
+
+TABLE-VALUED FUNCTIONS (7):
+----------------------------
+9. Academic.FN_GetCourseStatistics - Course statistics
+10. Exam.FN_GetStudentExamHistory - Student exam history
+11. Academic.FN_GetInstructorWorkload - Instructor workload stats
+12. Exam.FN_GetExamQuestions - Exam questions with details
+
+====================================================================
+VIEWS (19 TOTAL)
+====================================================================
+
+USER VIEWS:
+-----------
+1. Security.VW_UserDetails - Complete user information
+2. Academic.VW_StudentDetails - Student details with enrollment info
+3. Academic.VW_InstructorDetails - Instructor details with statistics
+
+ACADEMIC VIEWS:
+---------------
+4. Academic.VW_CourseDetails - Course information with statistics
+5. Academic.VW_CourseEnrollment - Student enrollments with grades
+6. Academic.VW_InstructorCourseAssignment - Instructor assignments
+
+EXAM VIEWS:
+-----------
+7. Exam.VW_ExamDetails - Complete exam information
+8. Exam.VW_QuestionPool - All questions with details
+9. Exam.VW_StudentExamResults - Student exam results
+10. Exam.VW_StudentAnswerDetails - Student answers with details
+11. Exam.VW_PendingGrading - Answers needing manual grading
+12. Exam.VW_ExamStatistics - Statistical view of exams
+
+REAL-TIME MONITORING VIEWS (ADVANCED!):
+----------------------------------------
+13. Exam.VW_LiveExamMonitoring - Live exam monitoring dashboard
+14. Exam.VW_ExamSessionStatistics - Exam session statistics
+15. Exam.VW_SuspiciousActivityMonitor - Cheating detection
+
+ANALYSIS VIEWS (BONUS!):
+-------------------------
+16. Exam.VW_TextAnswersAnalysis - Text answer analysis with AI-like scoring
+
+DASHBOARD VIEWS:
+----------------
+17. Security.VW_DashboardOverview - System-wide statistics
+18. Academic.VW_StudentProgress - Student progress tracking
+19. Exam.VW_InstructorDashboard - Instructor dashboard
+
+====================================================================
+TRIGGERS (14 TOTAL)
+====================================================================
+
+DATA INTEGRITY TRIGGERS:
+------------------------
+1. Exam.TR_StudentAnswer_AfterInsertUpdate - Auto-grades and updates scores
+2. Exam.TR_Question_InsteadOfDelete - Prevents deletion of active questions
+3. Exam.TR_ExamQuestion_AfterInsert - Validates exam total marks
+4. Exam.TR_StudentExam_AfterUpdate - Updates course grades
+5. Exam.TR_StudentExam_BeforeInsert - Validates student enrollment
+6. Exam.TR_QuestionOption_AfterInsertUpdate - Ensures one correct answer
+7. Academic.TR_Student_UpdateGPA - Updates student GPA
+8. Exam.TR_Exam_ValidateDateTime - Validates exam dates
+9. Academic.TR_Course_ValidateDegrees - Validates course degrees
+10. Academic.TR_Instructor_EnsureTrainingManager - Ensures manager exists
+
+AUDIT TRIGGERS:
+---------------
+11. Security.TR_User_AfterInsert - Logs user creation
+12. Security.TR_User_AfterUpdate - Logs user updates
+13. Exam.TR_Exam_AfterInsert - Logs exam creation
+
+====================================================================
+INDEXES (50+ NON-CLUSTERED INDEXES)
+====================================================================
+
+Performance indexes on:
+- User lookups (Username, Email, UserType)
+- Student queries (UserID, Intake/Branch/Track combinations)
+- Course assignments and enrollments
+- Question pool searches (CourseID, Type, Difficulty)
+- Exam queries (CourseID, DateTime, Status)
+- Answer submissions and grading
+
+====================================================================
+FILE GROUPS
+====================================================================
+
+1. PRIMARY - System tables and lookup data
+2. FG_Users - User and student/instructor data
+3. FG_Courses - Course and enrollment data
+4. FG_Questions - Question pool (largest data)
+5. FG_Exams - Exam definitions and assignments
+6. FG_Answers - Student answers (largest transactional data)
+
+====================================================================
+SECURITY ROLES
+====================================================================
+
+1. db_ExamAdmin - Full database access
+2. db_ExamTrainingManager - Manage courses, students, instructors
+3. db_ExamInstructor - Manage questions, exams, grading
+4. db_ExamStudent - Take exams, view results
+
+====================================================================
+BACKUP CONFIGURATION
+====================================================================
+
+AUTOMATED JOBS:
+---------------
+1. ExamSystem_DailyFullBackup - Full backup daily at 2:00 AM
+2. ExamSystem_LogBackup - Transaction log backup every 2 hours
+
+BACKUP LOCATIONS:
+-----------------
+- Full backups: C:\SQLBackups\ExaminationSystem\
+- Log backups: C:\SQLBackups\ExaminationSystem\Logs\
+- Manual backups: C:\SQLBackups\ExaminationSystem\Manual\
+
+RETENTION: 30 days
+
+====================================================================
+API READINESS
+====================================================================
+
+All stored procedures are designed for direct API consumption:
+- Clear input/output parameters
+- Comprehensive error handling
+- Transaction management
+- Return codes (0 = success, -1 = error)
+- Security checks at procedure level
+
+Recommended API structure:
+- Controllers: Admin, TrainingManager, Instructor, Student, Exam
+- Each controller maps to relevant stored procedures
+- Use JWT authentication mapped to UserType
+- Implement role-based authorization
+
+====================================================================
+END OF DOCUMENTATION
+====================================================================
